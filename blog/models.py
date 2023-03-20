@@ -7,19 +7,33 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 class TeamAd(models.Model):
     ROLES = [
+        ('ANY', 'Any'),
         ('DMG', 'Damage Dealer'),
         ('SUP', 'Support / Healer'),
         ('DEF', 'Tank / Defender'),
     ]
     SKILL = [
+        ('ANY', 'Any'),
         ('NEW', 'New player'),
         ('MID', 'Advanced player'),
         ('EXP', 'Expert player'),
-        ('PRO', 'Proffesional player')
+        ('PRO', 'Proffesional player'),
+    ]
+    GAMES = [
+        ('ANY', 'Any'),
+        ('LOL', 'League of Legends'),
+        ('WOW', 'World of Warcraft'),
+        ('DA2', 'Defense of the Ancients 2'),
+        ('DI4', 'Diablo 4'),
+        ('POE', 'Path of Exile'),
+        ('OW2', 'Overwatch 2'),
+        ('SMI', 'Smite'),
+        ('DAD', 'Dark and Darker'),
     ]
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="team_ad")  # noqa E501
+    game = models.CharField(max_length=3, choices=GAMES, default='ANY')
     role = models.CharField(max_length=3, choices=ROLES, default='ANY')
     skill_level = models.CharField(max_length=3, choices=SKILL, default='ANY')
     updated_on = models.DateTimeField(auto_now=True)
