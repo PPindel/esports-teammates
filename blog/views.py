@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
+from django.http import HttpResponseRedirect
+from django.contrib import messages
 from .models import TeamAd
 from .forms import CommentForm
 
@@ -42,6 +44,7 @@ class TeamDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = team
             comment.save()
+            messages.add_message(request, messages.INFO, 'SUCCESS!')
         else:
             comment_from = CommentForm()
 
