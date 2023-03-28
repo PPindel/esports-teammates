@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from django.contrib import messages
 from .models import TeamAd
 from .forms import CommentForm
+from django.views.generic import CreateView
 
 
 class TeamList(generic.ListView):
@@ -58,3 +59,9 @@ class TeamDetail(View):
                 "comment_form": CommentForm()
             },
         )
+
+
+class AddTeamAd(CreateView):
+    model = TeamAd
+    template_name = 'add_team.html'
+    fields = '__all__'

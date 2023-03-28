@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block content %}
+
+{% load crispy_forms_tags %}
+
+    <h1>Add a Team Ad:</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button>New Team Ad</button>
+    </form>
+
+{% endblock content %}
