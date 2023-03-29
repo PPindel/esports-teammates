@@ -3,7 +3,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from .models import TeamAd
-from .forms import CommentForm
+from .forms import CommentForm, TeamAdForm
 from django.views.generic import CreateView
 
 
@@ -61,8 +61,22 @@ class TeamDetail(View):
         )
 
 
-class AddTeamAd(CreateView):
-    model = TeamAd
-    template_name = 'add_team.html'
-    # fields = '__all__'
-    fields = ('title', 'author', 'game', 'role', 'skill_level', 'description', 'status')  # noqa E501
+# class AddTeamAd(CreateView):
+#     model = TeamAd
+#     template_name = 'add_team.html'
+#     fields = ('title', 'author', 'game', 'role', 'skill_level', 'description', 'status')  # noqa E501
+
+
+def add_new_ad(request):
+    form = TeamAdForm(request.POST or None, request.FILES or None)
+    if request.method == 'POST':
+         
+        if form.is_valid():
+             
+            obj = form.save(commit=False)
+            obj.user = request.user
+            obj.save()
+            form = TeamAdForm()
+            messages.success(request, "Successfully created")
+         
+    return render(request, 'add_team.html', {'form': form})
