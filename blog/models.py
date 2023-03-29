@@ -2,6 +2,10 @@ from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from teamfinder.util import unique_slug_generator
+from django.db.models.signals import pre_save
+from django.dispatch import receiver
+from django.conf import settings
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
@@ -32,7 +36,8 @@ class TeamAd(models.Model):
     ]
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="team_ad")  # noqa E501
+    # author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="team_ad")  # noqa E501
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)  # noqa E501
     game = models.CharField(max_length=5, choices=GAMES, default='LOL')
     role = models.CharField(max_length=3, choices=ROLES, default='ANY')
     skill_level = models.CharField(max_length=3, choices=SKILL, default='ANY')
@@ -50,6 +55,12 @@ class TeamAd(models.Model):
 
     def get_absolute_url(self):
         return reverse('home')
+
+
+@receiver(pre_save, sender=TeamAd)
+def pre_save_receiver(sender, instance, *args, **kwargs):
+    if not instance.slug:
+        instance.slug = unique_slug_generator(instance)
 
 
 class Comment(models.Model):

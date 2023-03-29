@@ -64,4 +64,5 @@ class TeamDetail(View):
 class AddTeamAd(CreateView):
     model = TeamAd
     template_name = 'add_team.html'
-    fields = '__all__'
+    # fields = '__all__'
+    fields = ('title', 'author', 'game', 'role', 'skill_level', 'description', 'status')  # noqa E501
