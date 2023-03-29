@@ -12,4 +12,4 @@ class CommentForm(forms.ModelForm):
 class TeamAdForm(forms.ModelForm):
     class Meta:
         model = TeamAd
-        fields = ['title', 'author', 'game', 'role', 'skill_level', 'description', 'status']  # noqa E501
+        fields = ['title', 'game', 'role', 'skill_level', 'description', 'status']  # noqa E501
