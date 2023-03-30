@@ -67,6 +67,7 @@
                     <!-- The body of the comment goes before the | -->
                     {{ comment.body | linebreaks }}
                 </div>
+                <a href="{% url 'edit_comment' comment.pk %}">Edit</a>
                 <!-- Our for loop ends here -->
                 {% endfor %}
             </div>

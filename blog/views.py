@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib import messages
-from .models import TeamAd
+from .models import TeamAd, Comment
 from .forms import CommentForm, TeamAdForm
 # from django.views.generic import CreateView
 
@@ -23,12 +23,12 @@ class TeamDetail(View):
 
         return render(
             request,
-            "team_detail.html",
+            'team_detail.html',
             {
-                "team": team,
-                "comments": comments,
-                "commented": False,
-                "comment_form": CommentForm()
+                'team': team,
+                'comments': comments,
+                'commented': False,
+                'comment_form': CommentForm()
             },
         )
 
@@ -51,12 +51,12 @@ class TeamDetail(View):
 
         return render(
             request,
-            "team_detail.html",
+            'team_detail.html',
             {
-                "team": team,
-                "comments": comments,
-                "commented": True,
-                "comment_form": CommentForm()
+                'team': team,
+                'comments': comments,
+                'commented': True,
+                'comment_form': CommentForm()
             },
         )
 
@@ -77,7 +77,19 @@ def add_new_ad(request):
             obj.author = request.user
             obj.save()
             form = TeamAdForm()
-            messages.success(request, "Successfully created")
+            messages.success(request, 'Successfully created')
             return redirect('team_detail', obj.slug)
 
     return render(request, 'add_team.html', {'form': form})
+
+
+class EditTeamAd(generic.UpdateView):
+    model = TeamAd
+    template_name = 'edit_team.html'
+    fields = ('title', 'game', 'role', 'skill_level', 'description', 'status')  # noqa E501
+
+
+class EditComment(generic.UpdateView):
+    model = Comment
+    template_name = 'edit_comment.html'
+    fields = ('body',)

@@ -1,5 +1,5 @@
 from django.db import models
-# from django.urls import reverse
+from django.urls import reverse
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from teamfinder.util import unique_slug_generator
@@ -53,8 +53,8 @@ class TeamAd(models.Model):
     def __str__(self):
         return self.title
 
-    # def get_absolute_url(self):
-    #     return reverse('home')
+    def get_absolute_url(self):
+        return reverse('home')
 
 
 @receiver(pre_save, sender=TeamAd)
@@ -76,3 +76,6 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
+
+    def get_absolute_url(self):
+        return reverse('home')
