@@ -3,8 +3,10 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from .models import TeamAd, Comment
-from .forms import CommentForm, TeamAdForm
-# from django.views.generic import CreateView
+from .forms import CommentForm, TeamAdForm, CommentEdit
+from django.utils.decorators import method_decorator
+from django.contrib.auth.decorators import login_required
+from django.urls import reverse
 
 
 class TeamList(generic.ListView):
@@ -61,7 +63,7 @@ class TeamDetail(View):
         )
 
 
-# class AddTeamAd(CreateView):
+# class AddTeamAd(generic.CreateView):
 #     model = TeamAd
 #     template_name = 'add_team.html'
 #     fields = ('title', 'author', 'game', 'role', 'skill_level', 'description', 'status')  # noqa E501
@@ -88,8 +90,27 @@ class EditTeamAd(generic.UpdateView):
     template_name = 'edit_team.html'
     fields = ('title', 'game', 'role', 'skill_level', 'description', 'status')  # noqa E501
 
+    def get_success_url(self, *args, **kwargs):
+        return reverse('team_detail', kwargs={'slug': self.object.slug})
 
+
+# class EditComment(generic.UpdateView):
+#     model = Comment
+#     template_name = 'edit_comment.html'
+#     fields = ('body',)
+
+
+@method_decorator(login_required, name='dispatch')
 class EditComment(generic.UpdateView):
     model = Comment
+    form_class = CommentEdit
     template_name = 'edit_comment.html'
-    fields = ('body',)
+
+    def form_valid(self, form):
+        super().form_valid(form)
+        messages.success(self.request, 'Successfully edited!')
+        return HttpResponseRedirect(self.get_success_url())
+
+    def get_success_url(self, *args, **kwargs):
+        TeamDetail.comment_edited = True
+        return reverse('team_detail', kwargs={'slug': self.object.post.slug})
