@@ -6,7 +6,7 @@ from .models import TeamAd, Comment
 from .forms import CommentForm, TeamAdForm, CommentEdit
 from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 
 
 class TeamList(generic.ListView):
@@ -114,3 +114,22 @@ class EditComment(generic.UpdateView):
     def get_success_url(self, *args, **kwargs):
         TeamDetail.comment_edited = True
         return reverse('team_detail', kwargs={'slug': self.object.post.slug})
+
+
+@method_decorator(login_required, name='dispatch')
+class DeleteComment(generic.DeleteView):
+    model = Comment
+    template_name = 'delete_comment.html'
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, 'Your comment has been deleted.')
+        return super(DeleteComment, self).delete(request, *args, **kwargs)
+
+    def get_success_url(self, *args, **kwargs):
+        TeamDetail.comment_deleted = True
+        return reverse('team_detail', kwargs={'slug': self.object.post.slug})
+
+# class DeleteComment(generic.DeleteView):
+#     model = Comment
+#     template_name = 'delete_comment.html'
+#     success_url = reverse_lazy('home')
