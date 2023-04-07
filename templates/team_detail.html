@@ -67,7 +67,9 @@
                     <!-- The body of the comment goes before the | -->
                     {{ comment.body | linebreaks }}
                 </div>
-                <a href="{% url 'edit_comment' comment.pk %}">Edit</a>
+                {% if comment.name == request.user.username %}
+                    <a href="{% url 'edit_comment' comment.pk %}">Edit</a>
+                {% endif %}
                 <!-- Our for loop ends here -->
                 {% endfor %}
             </div>

@@ -1,10 +1,12 @@
 {% extends 'base.html' %} {% block content %}
 
-    <h1>Edit your Team Ad:</h1>
+{% if user.is_authenticated %}
+    <h3>Edit your Team Ad:</h3>
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Update</button>
     </form>
+{% endif %}
 
 {% endblock content %}

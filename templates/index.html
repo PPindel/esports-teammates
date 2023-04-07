@@ -29,9 +29,11 @@
                             </a>
                             <hr />
                             <p class="card-text text-muted h6">{{ team.created_on}}</p>
-                            <a href="{% url 'edit_team' team.slug %}">Edit</a>
-                            <hr>
-                            <a href="{% url 'delete_team' team.slug %}">DELETE</a>
+                            {% if user.id == team.author.id %}
+                                <a href="{% url 'edit_team' team.slug %}">Edit</a>
+                                <hr>
+                                <a href="{% url 'delete_team' team.slug %}">DELETE</a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
