@@ -133,3 +133,17 @@ class DeleteComment(generic.DeleteView):
 #     model = Comment
 #     template_name = 'delete_comment.html'
 #     success_url = reverse_lazy('home')
+
+
+@method_decorator(login_required, name='dispatch')
+class DeleteTeamAd(generic.DeleteView):
+    model = TeamAd
+    template_name = 'delete_team.html'
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, 'Your ad has been deleted.')
+        return super(DeleteTeamAd, self).delete(request, *args, **kwargs)
+
+    def get_success_url(self, *args, **kwargs):
+        TeamDetail.team_deleted = True
+        return reverse('home')
