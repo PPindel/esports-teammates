@@ -3,18 +3,24 @@
 
 <div class="container"></div>
     {% if user.is_authenticated %}
-    <div class="card-container my-5">
-        <div class="col-12">
-            <h3>Edit your comment:</h3>
-            <form method="POST" enctype="multipart/form-data">
-                {% csrf_token %}
-                {{ form | crispy }}
-                <button type="submit">Update</button>
-                <hr>
-                <a href="{% url 'delete_comment' comment.pk %}">DELETE</a>
-            </form>
+        {% if comment.name == request.user.username %}
+        <div class="card-container my-5">
+            <div class="col-12">
+                <h3>Edit your comment:</h3>
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <button type="submit">Update</button>
+                    <hr>
+                    <a href="{% url 'delete_comment' comment.pk %}">DELETE</a>
+                </form>
+            </div>
         </div>
-    </div>
+        {% else %}
+        <p>You should't be here!</p>
+        {% endif %}
+    {% else %}
+    <p>You should't be here!</p>
     {% endif %}
 
 {% endblock content %}

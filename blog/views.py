@@ -3,7 +3,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from .models import TeamAd, Comment
-from .forms import CommentForm, TeamAdForm, CommentEdit
+from .forms import CommentForm, TeamAdForm, CommentEdit, TeamAdEdit
 from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse, reverse_lazy
@@ -69,6 +69,7 @@ class TeamDetail(View):
 #     fields = ('title', 'author', 'game', 'role', 'skill_level', 'description', 'status')  # noqa E501
 
 
+@method_decorator(login_required, name='dispatch')
 def add_new_ad(request):
     form = TeamAdForm(request.POST or None, request.FILES or None)
     if request.method == 'POST':
@@ -85,19 +86,47 @@ def add_new_ad(request):
     return render(request, 'add_team.html', {'form': form})
 
 
-class EditTeamAd(generic.UpdateView):
-    model = TeamAd
-    template_name = 'edit_team.html'
-    fields = ('title', 'game', 'role', 'skill_level', 'description', 'status')  # noqa E501
+# @method_decorator(login_required, name='dispatch')
+# class EditTeamAd(generic.UpdateView):
+#     model = TeamAd
+#     template_name = 'edit_team.html'
+#     fields = ('title', 'game', 'role', 'skill_level', 'description')
 
-    def get_success_url(self, *args, **kwargs):
-        return reverse('team_detail', kwargs={'slug': self.object.slug})
+    # def get(self, request, slug, *args, **kwargs):
+    #     queryset = TeamAd.objects.filter(status=1)
+    #     team = get_object_or_404(queryset, slug=slug)
+
+    #     return render(
+    #         request,
+    #         'edit_team.html',
+    #         {
+    #             'team': team
+    #         },
+    #     )
+
+    # def get_success_url(self, request, *args, **kwargs):
+    #     return reverse('team_detail', kwargs={'slug': self.object.slug})
 
 
 # class EditComment(generic.UpdateView):
 #     model = Comment
 #     template_name = 'edit_comment.html'
 #     fields = ('body',)
+
+
+@method_decorator(login_required, name='dispatch')
+class EditTeamAd(generic.UpdateView):
+    model = TeamAd
+    form_class = TeamAdEdit
+    template_name = 'edit_team.html'
+
+    def form_valid(self, form):
+        super().form_valid(form)
+        messages.success(self.request, 'Successfully edited!')
+        return HttpResponseRedirect(self.get_success_url())
+
+    def get_success_url(self, request, *args, **kwargs):
+        return reverse('team_detail', kwargs={'slug': self.object.slug})
 
 
 @method_decorator(login_required, name='dispatch')

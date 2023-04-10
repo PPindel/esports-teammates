@@ -15,6 +15,12 @@ class TeamAdForm(forms.ModelForm):
         fields = ['title', 'game', 'role', 'skill_level', 'description', 'status']  # noqa E501
 
 
+class TeamAdEdit(forms.ModelForm):
+    class Meta:
+        model = TeamAd
+        fields = ('title', 'game', 'role', 'skill_level', 'description')
+
+
 class CommentEdit(forms.ModelForm):
     class Meta:
         model = Comment
