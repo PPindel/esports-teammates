@@ -1,10 +1,12 @@
 {% extends 'base.html' %} {% block content %}
-
+{% if user.is_authenticated %}
     <h1>Add a Team Ad:</h1>
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">New Team Ad</button>
     </form>
-
+{% else %}
+How did you get here???
+{% endif %}
 {% endblock content %}

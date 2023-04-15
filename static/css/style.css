@@ -9,10 +9,6 @@ body {
     color: #4A4A4F;
 }
 
-.red-o {
-    color: #E84610;
-}
-
 .thin {
     font-weight: 300;
 }
@@ -46,7 +42,7 @@ body {
     background-color: rgb(59, 5, 48);
 }
 
-.author {
+.game {
     color: rgb(198, 190, 204);
     margin: 4px;
     text-transform: uppercase;
@@ -127,17 +123,4 @@ body {
 .link:active {
     color: #445261;
     text-decoration: underline;
-}
-
-.btn-like {
-    color: #E84610;
-    border: none;
-    background: transparent;
-}
-
-.btn-like:hover,
-.btn-like:active {
-    color: #E84610;
-    background: transparent;
-    border: none;
 }

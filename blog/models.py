@@ -53,8 +53,8 @@ class TeamAd(models.Model):
     def __str__(self):
         return self.title
 
-    # def get_absolute_url(self):
-    #     return reverse('home')
+    def get_absolute_url(self):
+        return reverse('home')
 
 
 @receiver(pre_save, sender=TeamAd)

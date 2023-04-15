@@ -2,8 +2,7 @@
 {% load crispy_forms_tags %}
 
 <div class="container"></div>
-    {% if user.is_authenticated %}
-        {% if comment.name == request.user.username %}
+        {% if user.is_authenticated and comment.name == request.user.username %}
         <div class="card-container my-5">
             <div class="col-12">
                 <h3>Edit your comment:</h3>
@@ -19,8 +18,5 @@
         {% else %}
         <p>You should't be here!</p>
         {% endif %}
-    {% else %}
-    <p>You should't be here!</p>
-    {% endif %}
 
 {% endblock content %}

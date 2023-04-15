@@ -69,7 +69,6 @@ class TeamDetail(View):
 #     fields = ('title', 'author', 'game', 'role', 'skill_level', 'description', 'status')  # noqa E501
 
 
-@method_decorator(login_required, name='dispatch')
 def add_new_ad(request):
     form = TeamAdForm(request.POST or None, request.FILES or None)
     if request.method == 'POST':
@@ -125,8 +124,36 @@ class EditTeamAd(generic.UpdateView):
         messages.success(self.request, 'Successfully edited!')
         return HttpResponseRedirect(self.get_success_url())
 
-    def get_success_url(self, request, *args, **kwargs):
-        return reverse('team_detail', kwargs={'slug': self.object.slug})
+    def get(self, request, slug, *args, **kwargs):
+        queryset = TeamAd.objects.filter(status=1)
+        team = get_object_or_404(queryset, slug=slug)
+
+        return render(
+            request,
+            'edit_team.html',
+            {
+                'team': team,
+                'form': TeamAdEdit(instance=team)
+            },
+        )
+
+    # def edit_ad(request):
+    #     if request.method == 'GET':
+    #         context = {'form': TeamAdEdit(instance=post), }
+    #         return render(request, 'edit_team.html', context)
+
+    #     elif request.method == 'POST':
+    #         team = get_object_or_404(queryset, slug=slug)
+    #         if form.is_valid():
+    #             form.save()
+    #             messages.success(request, 'The ad has been updated successfully.')  # noqa E501
+    #             return redirect('team_detail', obj.slug)
+    #         else:
+    #             messages.error(request, 'Please correct the following errors:')  # noqa E501
+    #             return render(request, 'edit_team.html', {'form': form, })
+
+    # def get_success_url(self, request, *args, **kwargs):
+    #     return reverse('team_detail', kwargs={'slug': self.object.slug})
 
 
 @method_decorator(login_required, name='dispatch')
@@ -168,6 +195,18 @@ class DeleteComment(generic.DeleteView):
 class DeleteTeamAd(generic.DeleteView):
     model = TeamAd
     template_name = 'delete_team.html'
+
+    def get(self, request, slug, *args, **kwargs):
+        queryset = TeamAd.objects.filter(status=1)
+        team = get_object_or_404(queryset, slug=slug)
+
+        return render(
+            request,
+            'delete_team.html',
+            {
+                'team': team,
+            },
+        )
 
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, 'Your ad has been deleted.')

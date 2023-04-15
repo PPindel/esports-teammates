@@ -40,7 +40,7 @@
                         </strong>
                         {% endwith %}
                     </div>
-                    {% if user.id == team.author.id %}
+                    {% if user.is_authenticated and user.id == team.author.id %}
                         <a href="{% url 'edit_team' team.slug %}">Edit</a>
                         <hr>
                         <a href="{% url 'delete_team' team.slug %}">DELETE</a>

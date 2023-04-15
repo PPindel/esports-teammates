@@ -53,7 +53,11 @@
                     {% endif %}
                 </ul>
                 <span class="navbar-text text-muted">
+                    {% if user.is_authenticated %}
                     Logged as: <strong>{{ request.user.username }}</strong>
+                    {% else %}
+                    Guest
+                    {% endif %}
                 </span>
             </div>
         </div>
@@ -81,7 +85,7 @@
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
-        <p class="m-0 text-center text-white">Made by Code Instituters</p>
+        <p class="m-0 text-center text-white">Made by Przemyslaw Pindel</p>
         <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
             <i class="fab fa-twitter-square ms-3"></i>
             <i class="fab fa-instagram-square ms-3"></i>
