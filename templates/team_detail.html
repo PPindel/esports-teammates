@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
 {% load crispy_forms_tags %}
-
+{% if user.is_authenticated %}
 <div class="masthead">
     <div class="container">
         <div class="row g-0">
@@ -102,5 +102,7 @@
         </div>
     </div>
 </div>
-
+{% else %}
+    Please log in to see the content
+{% endif %}
 {% endblock content %}
