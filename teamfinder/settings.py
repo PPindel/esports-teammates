@@ -14,8 +14,6 @@ from pathlib import Path
 import dj_database_url
 from django.contrib.messages import constants as messages
 import os
-if os.path.isfile('env.py'):
-    import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,7 +27,12 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if os.path.isfile('env.py'):
+    import env
+    # can override local to False here if you want to test things like 404, 500 error  # noqa E501
+    DEBUG = True
+else:
+    DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
