@@ -2,6 +2,38 @@ body {
     background-color: #F9FAFC;
 }
 
+.btn-color {
+    background-color: #b60b0b;
+    color: #fcf4b1;
+}
+
+.landing {
+    padding: 1px;
+    background: url('https://res.cloudinary.com/dbhwyosdi/image/upload/v1682774287/Esports%20Teammates/pexels-lucie-liz-3165335_csvcqh.jpg') center center / cover no-repeat;
+    background-position: center;
+    height: 150%;
+}
+
+.button-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5%;
+}
+
+.content-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5%;
+}
+
+.content-center > h1, h2 {
+    color: #df86f5;
+    background-color: #12337a;
+    padding: 1%;
+}
+
 .brand {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
