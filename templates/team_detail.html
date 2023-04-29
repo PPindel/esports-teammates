@@ -25,7 +25,7 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
@@ -33,28 +33,28 @@
                 <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text ">{{ team.description | safe }}</p>
                 <div class="row">
-                        {% with comments.count as total_comments %}
-                        <strong class="text-secondary"><i class="far fa-comments"></i>
-                            <!-- Our total_comments variable goes before the closing strong tag -->
-                            {{ total_comments }}
-                        </strong>
-                        {% endwith %}
-                    </div>
-                    {% if user.is_authenticated and user.id == team.author.id %}
-                        <a href="{% url 'edit_team' team.slug %}">Edit</a>
-                        <hr>
-                        <a href="{% url 'delete_team' team.slug %}">DELETE</a>
-                    {% endif %}
+                    {% with comments.count as total_comments %}
+                    <strong class="text-secondary"><i class="far fa-comments"></i>
+                        <!-- Our total_comments variable goes before the closing strong tag -->
+                        {{ total_comments }}
+                    </strong>
+                    {% endwith %}
                 </div>
+                {% if user.is_authenticated and user.id == team.author.id %}
+                    <a href="{% url 'edit_team' team.slug %}">Edit</a>
+                    <hr>
+                    <a href="{% url 'delete_team' team.slug %}">Delete</a>
+                {% endif %}
             </div>
         </div>
     </div>
+</div>
     <div class="row">
         <div class="col">
             <hr>
         </div>
     </div>
-    <div class="row">
+    <div class="row container-fluid">
         <div class="col-md-8 card mb-4  mt-3 ">
             <h3>Comments:</h3>
             <div class="card-body">
@@ -103,6 +103,6 @@
     </div>
 </div>
 {% else %}
-    Please log in to see the content
+    {% include "landing_page.html" %}
 {% endif %}
 {% endblock content %}

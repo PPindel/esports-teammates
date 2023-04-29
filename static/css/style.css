@@ -1,10 +1,5 @@
 body {
-    background-color: #F9FAFC;
-}
-
-.btn-color {
-    background-color: #b60b0b;
-    color: #fcf4b1;
+    background-color: white;
 }
 
 .landing {
@@ -14,13 +9,6 @@ body {
     height: 150%;
 }
 
-.button-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0.5%;
-}
-
 .content-center {
     display: flex;
     justify-content: center;
@@ -28,17 +16,20 @@ body {
     margin: 2.5%;
 }
 
-.content-center > h1, h2 {
-    color: #df86f5;
-    background-color: #12337a;
-    padding: 1%;
+.extra-margin {
+    margin: 2%;
+}
+
+.smoke-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    margin: 3%;
 }
 
 .brand {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #4A4A4F;
+    color: #D90368;
 }
 
 .thin {
@@ -46,15 +37,15 @@ body {
 }
 
 .light-bg {
-    background-color: #fff;
+    background-color: #b8cbf5;
 }
 
 .dark-bg {
-    background-color: #445261;
+    background-color: #1F1A38;
 }
 
 .main-bg {
-    background-color: #dbc4eb;
+    background-color: rgb(209, 189, 235);
 }
 
 .card {
@@ -71,11 +62,11 @@ body {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: rgb(59, 5, 48);
+    background-color: #310A31;
 }
 
 .game {
-    color: rgb(198, 190, 204);
+    color: #D90368;
     margin: 4px;
     text-transform: uppercase;
     font-weight: bold;
@@ -91,8 +82,8 @@ body {
 }
 
 .masthead-text {
-    background-color: #445261;
-    color: white;
+    background-color: #1F1A38;
+    color: #FFA0FD;
     position: relative;
 }
 
@@ -108,7 +99,7 @@ body {
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #445261;
+    background: #1F1A38;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
@@ -117,12 +108,12 @@ body {
 
 .post-link {
     text-decoration: none;
-    color: #445261;
+    color: #6E44FF;
 }
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    color: #D90368;
 }
 
 .post-title {
@@ -132,27 +123,27 @@ body {
 
 .post-subtitle {
     margin-left: 5%;
-    color: lightgray;
+    color: FFA0FD;
 }
 
 .btn-signup {
-    background-color: #23BBBB;
-    color: #fff;
+    background-color: #6E44FF;
+    color: #FFA0FD;
 }
 
 .btn-signup:hover,
 .btn-signup:active {
-    background-color: #fff;
-    color: #23BBBB;
+    background-color: #FFA0FD;
+    color: #6E44FF;
 }
 
 .link {
-    color: #23BBBB;
+    color: #6E44FF;
     text-decoration: none;
 }
 
 .link:hover,
 .link:active {
-    color: #445261;
+    color: #D90368;
     text-decoration: underline;
 }
