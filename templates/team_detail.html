@@ -18,7 +18,7 @@
                 {% if "placeholder" in team.featured_image.url %}
                 <img src="https://images.pexels.com/photos/9072388/pexels-photo-9072388.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="100%">
                 {% else %}
-                <img src="" width="100%">
+                <img src="{{ team.featured_image.url }}" width="100%">
                 {% endif %}
             </div>
         </div>
@@ -27,11 +27,11 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
-            <div class="card-body">
+        <div class="col card mb-2">
+            <div class="card-body text-center">
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text ">{{ team.description | safe }}</p>
+                <p class="card-text">{{ team.description | safe }}</p>
                 <div class="row">
                     {% with comments.count as total_comments %}
                     <strong class="text-secondary"><i class="far fa-comments"></i>
@@ -41,9 +41,8 @@
                     {% endwith %}
                 </div>
                 {% if user.is_authenticated and user.id == team.author.id %}
-                    <a href="{% url 'edit_team' team.slug %}">Edit</a>
-                    <hr>
-                    <a href="{% url 'delete_team' team.slug %}">Delete</a>
+                    <a class="btn btn-signup btn-md mt-2" href="{% url 'edit_team' team.slug %}">Edit</a>
+                    <a class="btn btn-signup btn-md mt-2" href="{% url 'delete_team' team.slug %}">Delete</a>
                 {% endif %}
             </div>
         </div>
@@ -71,10 +70,10 @@
                     </p>
                     <!-- The body of the comment goes before the | -->
                     {{ comment.body | linebreaks }}
+                    {% if comment.name == request.user.username %}
+                        <a class="btn btn-signup btn-md mt-2" href="{% url 'edit_comment' comment.pk %}">Edit</a>
+                    {% endif %}
                 </div>
-                {% if comment.name == request.user.username %}
-                    <a href="{% url 'edit_comment' comment.pk %}">Edit</a>
-                {% endif %}
                 <!-- Our for loop ends here -->
                 {% endfor %}
             </div>

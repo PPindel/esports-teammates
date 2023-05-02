@@ -1,5 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Ubuntu:wght@300&display=swap');
+
 body {
     background-color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Permanent Marker', cursive;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.logo {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.75rem;
+}
+
+.nav-item a {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.3rem;
 }
 
 .landing {
@@ -26,7 +47,7 @@ body {
 }
 
 .brand {
-    font-family: Lato, sans-serif;
+    font-family: Exo, sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
     color: #D90368;

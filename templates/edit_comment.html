@@ -9,9 +9,9 @@
             <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form | crispy }}
-                <button type="submit">Update</button>
+                <button class="btn btn-signup btn-md mt-2" type="submit">Update</button>
                 <hr>
-                <a href="{% url 'delete_comment' comment.pk %}">Delete</a>
+                <a class="btn btn-signup btn-md mt-2" href="{% url 'delete_comment' comment.pk %}">Delete</a>
             </form>
         </div>
     </div>

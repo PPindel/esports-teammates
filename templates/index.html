@@ -17,7 +17,7 @@
                                 <img class="card-img-top"
                                     src="https://res.cloudinary.com/dbhwyosdi/image/upload/v1682774288/Esports%20Teammates/pexels-yan-krukau-9072388_vgaawk.jpg">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ team.featured_image.url }}">
+                                <img class="card-img-top" src="{{ team.featured_image.url }}">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="game">{{ team.game }}</p>
