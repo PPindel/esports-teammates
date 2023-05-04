@@ -215,3 +215,7 @@ class DeleteTeamAd(generic.DeleteView):
     def get_success_url(self, *args, **kwargs):
         TeamDetail.team_deleted = True
         return reverse('home')
+
+
+def profile(request):
+    return render(request, 'profile.html')

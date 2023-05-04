@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container-fluid">
+{% if user.is_authenticated %}
+    <p>Username: <strong>{{ request.user.username }}</strong></p>
+    <p>First name: <strong>{{ request.user.first_name }}</strong></p>
+    <p>Last name: <strong>{{ request.user.last_name }}</strong></p>
+    <p>Email: <strong>{{ request.user.email }}</strong></p>
+{% else %}
+    {% include "landing_page.html" %}
+{% endif %}
+</div>
+{% endblock content %}

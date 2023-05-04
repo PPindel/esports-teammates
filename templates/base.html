@@ -51,7 +51,7 @@
                 </ul>
                 <span class="navbar-text text-muted">
                     {% if user.is_authenticated %}
-                    Logged as: <strong>{{ request.user.username }}</strong>
+                    Logged as:<a class="post-link" href="{% url 'profile' %}"> {{ request.user.username }}</a>
                     {% else %}
                     Not logged
                     {% endif %}
