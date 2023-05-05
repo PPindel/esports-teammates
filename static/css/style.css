@@ -30,6 +30,13 @@ html {
     height: 150%;
 }
 
+.error {
+    padding: 1px;
+    background: url('https://res.cloudinary.com/dbhwyosdi/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1683275497/Esports%20Teammates/pexels-alena-darmel-7862628_wsmtzw.jpg') center center / cover no-repeat;
+    background-position: center;
+    height: 150%;
+}
+
 .content-center {
     display: flex;
     justify-content: center;

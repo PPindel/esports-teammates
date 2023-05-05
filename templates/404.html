@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="error">  
+    <div class="content-center smoke-bg">
+        <h1 class="brand extra-margin">You encountered 404 error.</h1>
+    </div>
+
+    <div>
+        <div class="content-center smoke-bg extra-margin">
+            <a class="btn btn-outline-primary content-center brand" href="{% url 'home' %}">Take me home</a>
+        </div>
+    </div>
+
+    <div class="content-center smoke-bg">
+        <h2 class="brand extra-margin">You cannot win this fight.</h2>
+    </div>
+</div>
+{% endblock content %}

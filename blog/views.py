@@ -219,3 +219,18 @@ class DeleteTeamAd(generic.DeleteView):
 
 def profile(request):
     return render(request, 'profile.html')
+
+
+def error_404_view(request, exception):
+    """
+    Displays 404.html path
+    """
+
+    return render(request, '404.html')
+
+
+def handler500(request, *args, **argv):
+    """
+    Displays 500.html path
+    """
+    return render(request, '500.html')
