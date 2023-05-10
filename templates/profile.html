@@ -3,9 +3,21 @@
 <div class="container-fluid">
 {% if user.is_authenticated %}
     <p>Username: <strong>{{ request.user.username }}</strong></p>
-    <p>First name: <strong>{{ request.user.first_name }}</strong></p>
-    <p>Last name: <strong>{{ request.user.last_name }}</strong></p>
-    <p>Email: <strong>{{ request.user.email }}</strong></p>
+    {% if request.user.first_name %}
+        <p>First name: <strong>{{ request.user.first_name }}</strong></p>
+    {% else %}
+        <p>First name: <strong>not provided</strong></p>
+    {% endif %}
+    {% if request.user.last_name %}
+        <p>Last name: <strong>{{ request.user.last_name }}</strong></p>
+    {% else %}
+        <p>Last name: <strong>not provided</strong></p>
+    {% endif %}
+    {% if request.user.email %}
+        <p>Email: <strong>{{ request.user.email }}</strong></p>
+    {% else %}
+        <p>Email: <strong>not provided</strong></p>
+    {% endif %}
 {% else %}
     {% include "landing_page.html" %}
 {% endif %}

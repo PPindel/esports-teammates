@@ -8,7 +8,7 @@
             <h3>Edit your comment:</h3>
             <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
-                {{ form | crispy }}
+                {{ form|crispy }}
                 <button class="btn btn-signup btn-md mt-2" type="submit">Update</button>
                 <hr>
                 <a class="btn btn-signup btn-md mt-2" href="{% url 'delete_comment' comment.pk %}">Delete</a>

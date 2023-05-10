@@ -1,11 +1,12 @@
 {% extends 'base.html' %} {% block content %}
+{% load crispy_forms_tags %}
 
 <div class="container-fluid">
 {% if user.is_authenticated and user.id == team.author.id %}
     <h3>Edit your Team Ad:</h3>
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form|crispy }}
         <button class="btn btn-signup btn-md mt-2" type="submit">Update</button>
     </form>
 {% else %}
