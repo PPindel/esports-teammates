@@ -5,7 +5,12 @@ body {
     font-family: 'Ubuntu', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Permanent Marker', cursive;
 }
 
@@ -76,9 +81,17 @@ html {
     background-color: rgb(209, 189, 235);
 }
 
+.game-picture {
+    width: 100%;
+}
+
 .card {
     border: none;
     background-color: transparent;
+}
+
+.card-text {
+    color: #382281;
 }
 
 .image-container {
@@ -94,7 +107,7 @@ html {
 }
 
 .game {
-    color: #D90368;
+    color: #ff78b8;
     margin: 4px;
     text-transform: uppercase;
     font-weight: bold;
@@ -105,7 +118,7 @@ html {
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 33vh;
+    height: auto;
     width: 100%;
 }
 
@@ -120,23 +133,9 @@ html {
     overflow: hidden;
 }
 
-.masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: #1F1A38;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
-}
-
 .post-link {
     text-decoration: none;
-    color: #6E44FF;
+    color: #5434c3;
 }
 
 .post-link:hover,
@@ -151,17 +150,17 @@ html {
 
 .post-subtitle {
     margin-left: 5%;
-    color: FFA0FD;
+    color: #FFA0FD;
 }
 
 .btn-signup {
     background-color: #6E44FF;
-    color: #FFA0FD;
+    color: #ffe7fe;
 }
 
 .btn-signup:hover,
 .btn-signup:active {
-    background-color: #FFA0FD;
+    background-color: #ffe7fe;
     color: #6E44FF;
 }
 

@@ -15,20 +15,20 @@
                             <div class="image-container">
                                 {% if "placeholder" in team.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="https://res.cloudinary.com/dbhwyosdi/image/upload/v1682774288/Esports%20Teammates/pexels-yan-krukau-9072388_vgaawk.jpg">
+                                    src="https://res.cloudinary.com/dbhwyosdi/image/upload/v1682774288/Esports%20Teammates/pexels-yan-krukau-9072388_vgaawk.jpg" alt="Game picture">
                                 {% else %}
-                                <img class="card-img-top" src="{{ team.featured_image.url }}">
+                                <img class="card-img-top" src="{{ team.featured_image.url }}" alt="Game picture">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="game">{{ team.game }}</p>
                                 </div>
                             </div>
                             <a href="{% url 'team_detail' team.slug %}" class="post-link">
-                                <h2 class="card-title">{{ team.title }}</h2>
+                                <h2>{{ team.title }}</h2>
                                 <p class="card-text">Created by: {{ team.author }}</p>
                             </a>
                             <hr />
-                            <p class="card-text text-muted h6">{{ team.created_on}}</p>
+                            <p class="card-text h6">{{ team.created_on}}</p>
                         </div>
                     </div>
                 </div>
