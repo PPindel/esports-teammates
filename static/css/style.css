@@ -30,7 +30,7 @@ html {
 
 .landing {
     padding: 1px;
-    background: url('https://res.cloudinary.com/dbhwyosdi/image/upload/v1682774287/Esports%20Teammates/pexels-lucie-liz-3165335_csvcqh.jpg') center center / cover no-repeat;
+    background: url('https://res.cloudinary.com/dbhwyosdi/image/upload/v1683725885/Esports%20Teammates/pexels-lucie-liz-3165335-min_zdrnet.jpg') center center / cover no-repeat;
     background-position: center;
     height: 150%;
 }
@@ -144,8 +144,7 @@ html {
 }
 
 .post-title {
-    margin-top: 20%;
-    margin-left: 5%;
+    margin: 5%;
 }
 
 .post-subtitle {
