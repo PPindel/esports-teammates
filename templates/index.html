@@ -25,6 +25,8 @@
                             <a href="{% url 'team_detail' team.slug %}" class="post-link">
                                 <h2>{{ team.title }}</h2>
                                 <p class="card-text">Created by: {{ team.author }}</p>
+                                <p class="card-text">Role: {{ team.role }}</p>
+                                <p class="card-text">Skill level: {{ team.skill_level }}</p>
                             </a>
                             <hr />
                             <p class="card-text h6">{{ team.created_on}}</p>
