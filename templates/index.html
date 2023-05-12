@@ -14,7 +14,8 @@
                             <div class="image-container">
                                 {% if "placeholder" in team.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="https://res.cloudinary.com/dbhwyosdi/image/upload/v1683725885/Esports%20Teammates/pexels-yan-krukau-9072394-min_cgovlw.jpg" alt="Game picture">
+                                    src="https://res.cloudinary.com/dbhwyosdi/image/upload/v1683725885/Esports%20Teammates/pexels-yan-krukau-9072394-min_cgovlw.jpg"
+                                    alt="Game picture">
                                 {% else %}
                                 <img class="card-img-top" src="{{ team.featured_image.url }}" alt="Game picture">
                                 {% endif %}
@@ -52,7 +53,10 @@
     {% endif %}
 </div>
 {% else %}
-    {% include "landing_page.html" %}
+{% include "landing_page.html" %}
+<div class="fill dark-bg">
+    
+</div>
 {% endif %}
 
 {% endblock %}

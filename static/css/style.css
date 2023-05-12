@@ -32,7 +32,7 @@ html {
     padding: 1px;
     background: url('https://res.cloudinary.com/dbhwyosdi/image/upload/v1683725885/Esports%20Teammates/pexels-lucie-liz-3165335-min_zdrnet.jpg') center center / cover no-repeat;
     background-position: center;
-    height: 150%;
+    height: 130%;
     object-fit: cover;
 }
 
@@ -40,7 +40,7 @@ html {
     padding: 1px;
     background: url('https://res.cloudinary.com/dbhwyosdi/image/upload/v1683725885/Esports%20Teammates/pexels-alena-darmel-7862628-min_j73nai.jpg') center center / cover no-repeat;
     background-position: center;
-    height: 150%;
+    height: 130%;
 }
 
 .content-center {
@@ -179,4 +179,20 @@ html {
 .link:active {
     color: #D90368;
     text-decoration: underline;
+}
+
+.fill {
+    height: 2vh;
+}
+
+@media screen and (max-width: 1000px) {
+    .fill {
+        height: 20vh;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .card-img-top {
+        height: 50vw;
+    }
 }
