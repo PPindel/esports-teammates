@@ -5,6 +5,10 @@ body {
     font-family: 'Ubuntu', sans-serif;
 }
 
+a {
+    color: #094cae;
+}
+
 h1,
 h2,
 h3,
