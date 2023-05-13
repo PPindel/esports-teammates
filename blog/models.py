@@ -23,7 +23,7 @@ class TeamAd(models.Model):
         ('New player', 'New player'),
         ('Advanced player', 'Advanced player'),
         ('Expert player', 'Expert player'),
-        ('Proffesional player', 'Proffesional player'),
+        ('Proffessional player', 'Proffessional player'),
     ]
     GAMES = [
         ('League of Legends', 'League of Legends'),
