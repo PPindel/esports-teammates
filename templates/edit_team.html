@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 {% load crispy_forms_tags %}
-
+<!-- Edit Team (post) page -->
 <div class="container-fluid">
 {% if user.is_authenticated and user.id == team.author.id %}
     <h3>Edit your Team Ad:</h3>

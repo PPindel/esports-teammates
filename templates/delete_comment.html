@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+<!-- Delete a comment page -->
 {% block content %}
 <div class="container-fluid">
 {% if user.is_authenticated and comment.name == request.user.username %}

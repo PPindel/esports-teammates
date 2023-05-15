@@ -1,5 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 
+<!-- Simple profile page using user model -->
 <div class="container-fluid">
 {% if user.is_authenticated %}
     <p>Username: <strong>{{ request.user.username }}</strong></p>

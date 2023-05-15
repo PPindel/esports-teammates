@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 {% load crispy_forms_tags %}
-
+<!-- Edit comment page -->
 <div class="container-fluid">
     {% if user.is_authenticated and comment.name == request.user.username %}
     <div class="card-container my-5">
