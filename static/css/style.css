@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Ubuntu:wght@300&display=swap');
 
+/* Main body style improvements */
 body {
     background-color: white;
     font-family: 'Ubuntu', sans-serif;
@@ -22,6 +23,7 @@ html {
     scroll-behavior: smooth;
 }
 
+/* navigation bar */
 .logo {
     font-family: 'Permanent Marker', cursive;
     font-size: 1.75rem;
@@ -32,6 +34,7 @@ html {
     font-size: 1.3rem;
 }
 
+/* special pages to manage unauthorised access */
 .landing {
     padding: 1px;
     background: url('https://res.cloudinary.com/dbhwyosdi/image/upload/v1683725885/Esports%20Teammates/pexels-lucie-liz-3165335-min_zdrnet.jpg') center center / cover no-repeat;
@@ -47,6 +50,7 @@ html {
     height: 130%;
 }
 
+/* useful class to center sections */
 .content-center {
     display: flex;
     justify-content: center;
@@ -189,12 +193,16 @@ html {
     height: 2vh;
 }
 
+/* Media queries */
+
+/* For size from 1000px wide and down - small laptops*/
 @media screen and (max-width: 1000px) {
     .fill {
         height: 20vh;
     }
 }
 
+/* For size from 767px wide and down - tablets and smartphones */
 @media screen and (max-width: 767px) {
     .card-img-top {
         height: 50vw;
