@@ -116,29 +116,19 @@ Markdown's not all that easy so sometimes you may want to use some tools to make
   
 ====================================== The Sections you Fill in are below ==============================
 
-# PROJECT_NAME
-🚨**Required** 
-
-*replace the **PROJECT NAME** header with your project's name*
-
-- One or two paragraphs providing an overview of your project.
-- Write this as a sales pitch or commercial to entice users to interact with your site or how you want investors to invest in or purchase your website.
-- Include a picture of site that shows it in responsive states and links to deployed code: https://ui.dev/amiresponsive
+# Esports Teammates
+- Esports Teammates is a site created for people who like to play online, but couldn't find right teammates yet
+- By creating a post, you can select your game, and describe your exerience, gaming skills and times preffered to play with your mates
+- Easy to operate, easy to navigate, intuitive and well designed site for all gamers!
 
 ## Live Site
-🚨**Required** 
-
-- Include a link to deployed project (typically a Heroku Page)
+https://esports-teammates.herokuapp.com/
 
 ## Repository
-🚨**Required** 
-
-- Include a Link to the GitHub repository
+https://github.com/PPindel/esports-teammates
 
 ## Author
-🚨**Required** 
-
-DEVELOPER_NAME (take credit for the work you do!)
+Przemyslaw Pindel
 
 # Table of Contents
 🚀 **merit & beyond**
@@ -148,8 +138,6 @@ Generate after readme is complete by copying and pasting your readme from this p
 **NOTE:** It does have some bugs if you have dashes or trailing spaces in your headers, so make sure all these WORK!
 
 # UX
-🚨**Required** 
-
 ## Target Audience
 🚀 **merit & beyond**
 
