@@ -139,84 +139,77 @@ Generate after readme is complete by copying and pasting your readme from this p
 
 # UX
 ## Target Audience
-🚀 **merit & beyond**
-
-our site is most likely geared to a certain audience with a certain interest, that is looking for what your site offers. The type of users, age, gender, interests, and the topic of the site drives many UX decisions so write out what whom you expect to use your site.
+Esports Teammates is designed to be attractive to the gaming community.
+It reflects the popular design of gaming accessories (illuminating leds for PCs, keyboards, mouses, etc.).
+The site is easy to operate and navigate, the content is clear and users can communicate with themselves to find new online friends!
 
 ## Design Choices
-🚀 **merit & beyond**
-
-Now that you have let the assessors know about the target audience and users, you can go into the design choices
-
 ### Colors
-🚀 **merit & beyond**
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/c0967ae8-0651-4f6b-8535-be232ec512e2)
 
-- Discuss your color pallet choices and how it ties into users' emotions or target audience.
-- include a screenshot of your pallet using a tool like coolors.co
+The pallet inspiration was taken from coolors.co.
+However, some of the colors had to be adjusted to match the contrast standard in the Lighthouse validator.
 
 ### Typography
-🚀 **merit & beyond**
-
-- discuss font size, font types for headers vs buttons vs general text and how it ties into users' emotions or target
-  audience.
-- include screenshots of fonts used and links to the appropriate website ex) https://fonts.google.com/specimen/Raleway
-
-### Images
-🚀 **merit & beyond**
-
-Explain why you used certain icons and images on your site
+Fonts used:
+- Permanent Marker for modern and attractive design
+- Ubuntu for clear and readable content
 
 ### Design Elements
-🚀 **merit & beyond**
+The site has a common navbar (sticky to the top when scrolling), and footer.
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/e160e81d-07f4-4581-98c0-0ba1cbb484b4)
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/d604e5db-cefe-424b-a328-56ed0d9f2965)
 
-- list out the type of elements you want to use on your site, this will help you when choosing a framework and goes hand
-  in hand when doing the wireframes. If you did something out of the ordinary, or think something was particularly
-  clever, add a sentence and a screenshot or reference the file the code or css is in.
+Up to six posts per page, two rows of three posts for desktops, and one column for mobile phones.
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/a1bc8c5e-24a9-4d48-aa38-dc9c1bf73e1b)
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/60bdad1b-6473-4965-a7fb-cbae164b295d)
 
-> - desktop navigation
-> - mobile navigation
-> - footer
-> - containers/cards
-> - buttons
-> - text input
-> - textarea inputs
-> - dropdowns
-> - modals/layers
-> - check boxes
-> - switches
-> - accordions/drawers
-> - pagination
-> - date pickers
-> - maps
-> - images
-> - tooltips
-> - icons
-> - tabbed content
-> - file pickers
-> - video players
-> - audio players
-z
-### Animations and Transitions
-🚀 **merit & beyond**
+Landing page for not authenticated users:
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/3a38c9fb-76dd-4564-b91c-3ee9995a1ca3)
 
-- discuss any special animations or transitions you've programmed
-- special hover state effects
+Buttons are changing colors when hovering over:
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/9ad37536-54e1-4608-8fc4-c655162a72dd)
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/eba8cb26-a89f-4147-b69f-fce54cc0c267)
 
-### Frameworks
-🚨**Required** 
+All default Django pages (signup, login, etc.) are customised:
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/906e3e34-96da-4922-80e3-dca435e099d8)
 
-- If you use bootstrap, tailwind, bulma, materialize or some other JS/CSS framework, call it out here and why you made
-  that choice. (Typically I look at the design elements I want and make sure the framework supports them)
+Custom 404 and 500 error pages:
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/9621e955-8577-4f84-81ef-e5cc63612f3d)
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/031702af-1700-413f-8b42-0c3475748df3)
 
-### Custom Styles
-🚨**Required**
+JS script for alerts:
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/a05ee5b3-523b-44d1-8896-f55e322a273c)
 
-- call out any overrides you did for bootstrap styles or the framework you used, even if they are fonts and colors, perhaps lead assessors to the file of interest in your repo
+Simple profile page:
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/e874c26c-b37b-4668-a805-44f3b9f524d3)
 
-### Custom Javascript
-🚨**Required** 
+Link to my user stories:
+https://github.com/users/PPindel/projects/4
 
-- call attention to any custom javascript you created to help your User Experience you can organize this by functions or files
+### Frameworks, plugins, tools used
+- Bootstrap
+- Django
+- req.txt:
+  asgiref==3.6.0
+  cloudinary==1.32.0
+  crispy-bootstrap5==0.7
+  dj-database-url==0.5.0
+  dj3-cloudinary-storage==0.0.6
+  Django==3.2.18
+  Django-Accounts==0.1
+  django-allauth==0.53.1
+  django-crispy-forms==1.14.0
+  django-summernote==0.8.20.0
+  gunicorn==20.1.0
+  oauthlib==3.2.2
+  psycopg2==2.9.5
+  PyJWT==2.6.0
+  python3-openid==3.2.0
+  pytz==2022.7.1
+  requests-oauthlib==1.3.1
+  sqlparse==0.4.3
+
 
 ## Wireframes
 🚨**Required** 
