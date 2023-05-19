@@ -184,6 +184,9 @@ JS script for alerts:
 Simple profile page:
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/e874c26c-b37b-4668-a805-44f3b9f524d3)
 
+Admin page:
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/1c2b2645-fa2d-4f64-ac6e-7346f6612fc6)
+
 Link to my user stories:
 https://github.com/users/PPindel/projects/4
 
@@ -212,33 +215,22 @@ https://github.com/users/PPindel/projects/4
 
 
 ## Wireframes
-🚨**Required** 
+Landing page:
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/69be5979-b6e4-4fa2-8a72-67d009b862ec)
 
-This section where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. 
+Desktop site:
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/e2efaa7f-b4f1-468d-a260-57cc0e650a2f)
 
-- you need **mobile** & **desktop** views
-- Capture Your Custom model's
-  - CREATE/ADD
-  - READ (LIST/DETAIL)
-  - UPDATE/EDIT
-  - DELETE
-  - & triggers for such things
-- call out differences for authentication levels:
-  - not logged in
-  - general user logged in
-  - super user logged in
-- HOW is the NAVIGATION different for admin users vs Logged-in users & unauthenticated users
+Mobile site:
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/8efc194f-ec88-4cf3-8e94-800d8cca3203)
 
-🚀 **merit & beyond**
-- tablet views
-- Custom 404
-- Profile Page
-- Login
-- Register
-- Forgot Password
+Team detail page:
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/817847d3-29a1-48c5-b962-3d7067464dbc)
 
-You can hand draw these, but CI posts a yearly license in the general channel for Balsamiq which is pretty easy to use.
-Here is the [2022 announcement](https://code-institute-room.slack.com/archives/C0L316Z96/p1640099614368000)
+Register page:
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/54878dc1-0691-4db9-a5a5-7c9a0fa8c86d)
+
+Some of the details were changed in final product.
 
 # Information Architecture
 🚨**Required** 
