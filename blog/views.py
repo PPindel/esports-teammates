@@ -63,12 +63,6 @@ class TeamDetail(View):
         )
 
 
-# class AddTeamAd(generic.CreateView):
-#     model = TeamAd
-#     template_name = 'add_team.html'
-#     fields = ('title', 'author', 'game', 'role', 'skill_level', 'description', 'status')  # noqa E501
-
-
 def add_new_ad(request):
     form = TeamAdForm(request.POST or None, request.FILES or None)
     if request.method == 'POST':
@@ -83,34 +77,6 @@ def add_new_ad(request):
             return redirect('team_detail', obj.slug)
 
     return render(request, 'add_team.html', {'form': form})
-
-
-# @method_decorator(login_required, name='dispatch')
-# class EditTeamAd(generic.UpdateView):
-#     model = TeamAd
-#     template_name = 'edit_team.html'
-#     fields = ('title', 'game', 'role', 'skill_level', 'description')
-
-    # def get(self, request, slug, *args, **kwargs):
-    #     queryset = TeamAd.objects.filter(status=1)
-    #     team = get_object_or_404(queryset, slug=slug)
-
-    #     return render(
-    #         request,
-    #         'edit_team.html',
-    #         {
-    #             'team': team
-    #         },
-    #     )
-
-    # def get_success_url(self, request, *args, **kwargs):
-    #     return reverse('team_detail', kwargs={'slug': self.object.slug})
-
-
-# class EditComment(generic.UpdateView):
-#     model = Comment
-#     template_name = 'edit_comment.html'
-#     fields = ('body',)
 
 
 @method_decorator(login_required, name='dispatch')
@@ -136,24 +102,6 @@ class EditTeamAd(generic.UpdateView):
                 'form': TeamAdEdit(instance=team)
             },
         )
-
-    # def edit_ad(request):
-    #     if request.method == 'GET':
-    #         context = {'form': TeamAdEdit(instance=post), }
-    #         return render(request, 'edit_team.html', context)
-
-    #     elif request.method == 'POST':
-    #         team = get_object_or_404(queryset, slug=slug)
-    #         if form.is_valid():
-    #             form.save()
-    #             messages.success(request, 'The ad has been updated successfully.')  # noqa E501
-    #             return redirect('team_detail', obj.slug)
-    #         else:
-    #             messages.error(request, 'Please correct the following errors:')  # noqa E501
-    #             return render(request, 'edit_team.html', {'form': form, })
-
-    # def get_success_url(self, request, *args, **kwargs):
-    #     return reverse('team_detail', kwargs={'slug': self.object.slug})
 
 
 @method_decorator(login_required, name='dispatch')
@@ -184,11 +132,6 @@ class DeleteComment(generic.DeleteView):
     def get_success_url(self, *args, **kwargs):
         TeamDetail.comment_deleted = True
         return reverse('team_detail', kwargs={'slug': self.object.post.slug})
-
-# class DeleteComment(generic.DeleteView):
-#     model = Comment
-#     template_name = 'delete_comment.html'
-#     success_url = reverse_lazy('home')
 
 
 @method_decorator(login_required, name='dispatch')
