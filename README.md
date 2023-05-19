@@ -117,6 +117,8 @@ Markdown's not all that easy so sometimes you may want to use some tools to make
 ====================================== The Sections you Fill in are below ==============================
 
 # Esports Teammates
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/30be1f01-4b22-45ff-9455-95161df96fea)
+
 - Esports Teammates is a site created for people who like to play online, but couldn't find right teammates yet
 - By creating a post, you can select your game, and describe your exerience, gaming skills and times preffered to play with your mates
 - Easy to operate, easy to navigate, intuitive and well designed site for all gamers!
@@ -157,34 +159,43 @@ Fonts used:
 
 ### Design Elements
 The site has a common navbar (sticky to the top when scrolling), and footer.
+
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/e160e81d-07f4-4581-98c0-0ba1cbb484b4)
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/d604e5db-cefe-424b-a328-56ed0d9f2965)
 
 Up to six posts per page, two rows of three posts for desktops, and one column for mobile phones.
+
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/a1bc8c5e-24a9-4d48-aa38-dc9c1bf73e1b)
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/60bdad1b-6473-4965-a7fb-cbae164b295d)
 
 Landing page for not authenticated users:
+
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/3a38c9fb-76dd-4564-b91c-3ee9995a1ca3)
 
 Buttons are changing colors when hovering over:
+
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/9ad37536-54e1-4608-8fc4-c655162a72dd)
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/eba8cb26-a89f-4147-b69f-fce54cc0c267)
 
 All default Django pages (signup, login, etc.) are customised:
+
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/906e3e34-96da-4922-80e3-dca435e099d8)
 
 Custom 404 and 500 error pages:
+
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/9621e955-8577-4f84-81ef-e5cc63612f3d)
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/031702af-1700-413f-8b42-0c3475748df3)
 
 JS script for alerts:
+
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/a05ee5b3-523b-44d1-8896-f55e322a273c)
 
 Simple profile page:
+
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/e874c26c-b37b-4668-a805-44f3b9f524d3)
 
 Admin page:
+
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/1c2b2645-fa2d-4f64-ac6e-7346f6612fc6)
 
 Link to my user stories:
@@ -216,18 +227,23 @@ https://github.com/users/PPindel/projects/4
 
 ## Wireframes
 Landing page:
+
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/69be5979-b6e4-4fa2-8a72-67d009b862ec)
 
 Desktop site:
+
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/e2efaa7f-b4f1-468d-a260-57cc0e650a2f)
 
 Mobile site:
+
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/8efc194f-ec88-4cf3-8e94-800d8cca3203)
 
 Team detail page:
+
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/817847d3-29a1-48c5-b962-3d7067464dbc)
 
 Register page:
+
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/54878dc1-0691-4db9-a5a5-7c9a0fa8c86d)
 
 Some of the details were changed in final product.
@@ -572,18 +588,7 @@ Wave is developed by webaim.org and does a bit better at contrast issues and use
 - https://color.a11y.com/
 
 ### Keyboard Navigation
-🚀 **merit & beyond**
-
-Another way to accessibility test your site is to try to click on the browser URL and see what happens if you use the tab, arrow and enter keys. Does it work well or does the user get stuck? Check this in a couple browsers as the focus & active outlines are typically styled by the browser
-
-The expected results for various keyboard entries and field types can be found [here](https://webaim.org/techniques/keyboard/#testing)
-
-You can take a video of this testing if you want and convert it to a gif and paste that into your readme. Record something to yourself in a Slack direct message, then download it. Then you can use https://cloudconvert.com/mp4-to-gif to convert the mp4 to a gif and just paste it into the readme via GiHu, and it'll resolve itself.
-
-### Chrome Vox Reader
-🚀 **merit & beyond**
-
-If you are really ambitious, you can use the [VoxReader](https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en) extension in chrome to see what your site sounds like on a screen reader. It really drives home the need for good aria-labels & semantic HTML.
+Esports Teammates is optimized for keyboard navigation!
 
 ## Core Web Vitals
 🚀 **merit & beyond**
@@ -698,31 +703,28 @@ Sometimes it's as simple, word wrapping issue that makes the site look odd at a 
 
 
 # Technologies Used
-🚀 **merit & beyond**
-
-This section just summarizers tools and programming languages you used.
-
 ## Languages
-🚀 **merit & beyond**
-
--write bullet points for the languages you used (HTML, CSS, JAVASCRIPT, PYTHON,  DJANGO)
+- html
+- css
+- java script
+- python
+- django
 
 ## Frameworks, Libraries & Programs Used
-🚀 **merit & beyond**
-
-List out the tools you used with a link and a short description (this helps others figure out where to get the bonus points & reminds you what you used for your next project
 - Balsamiq
 - Coolors.co
 - fontawesome
+- pexels.com
 - gitpod
 - github
 - google fonts
-- font awesome
-- amiresponsive
+- https://techsini.com/multi-mockup/index.php - responsiveness
 - table of contents creator
 - markdown table generator
-
-
+- Heroku
+- Cloudinary
+- ElephantSQL
+- Bootstrap
 
 # Deployment
 🚨**Required** 
@@ -816,24 +818,21 @@ values.
 
 # Credits
 
-To avoid plagiarism amd copyright infringement, you should mention any other projects, stackoverflow, videos, blogs, etc
-that you used to gather imagery or ideas for your code even if you used it as a starting point and modified things.
-Giving credit to other people's efforts and ideas that saved you time acknowledges the hard work others did.
-
-- [Code Institute Template](https://github.com/Code-Institute-Org/python-essentials-template)
-- The Template for the GUI for this project was provided by Code Institute. This allows for the Command line to be shown and used within the browser.
-
-## Content
-
-Use bullet points to list out sites you copied text from and cross-reference where those show up on your site
+- https://www.geeksforgeeks.org/ - code solutions
+- https://stackoverflow.com/ - code solutions
+- https://www.w3schools.com/ - code solutions
+- https://learndjango.com - code solutions
+- https://github.com/CaraMcAvinchey/stem-and-leaf-blog - some code inspirations
+- https://www.youtube.com/@Codemycom - Create A Simple Django Blog by John Elder
+- [Code Institute Template](https://github.com/Code-Institute-Org/python-essentials-template](https://github.com/Code-Institute-Org/gitpod-full-template)
 
 ## Media
 
-Make a list of sites you used images from. If you used several sites try to match up each image to the correct site.
-This includes attribution for icons if they came from font awesome or other sites, give them credit.
+- https://pexels.com
+- (users can add their own pictures to Team Ads, so I cannot point the source of some images...)
 
 ## Acknowledgments
 
-This is the section where you refer to code examples, mentors, blogs, stack overflow answers and videos that helped you accomplish your end project. Even if it's an idea that you updated you should note the site and why it was important to your completed project.
+Big thanks to Malia Havlicek - Code Institute mentor for her ideas and support in this project! Also, I would like to thank all my friends for live testing the program!
 
-If you used a CodeInstitute Instructional project as a starting point. Make note of that here too.
+https://pep8ci.herokuapp.com/ - code validation tool
