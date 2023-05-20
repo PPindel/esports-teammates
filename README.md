@@ -726,29 +726,11 @@ Sometimes it's as simple, word wrapping issue that makes the site look odd at a 
 - ElephantSQL
 - Bootstrap
 
-# Deployment
-🚨**Required** 
-
-## Prerequisits
-🚀 **merit & beyond**
-
-If the user is required to have certain keys and credentials you should include this section with directions on how to get the necessary information. ex)
-
-1. **Gmail Account:** In order to have verification and forgot password emails sent to registered users you need a
-   google account. 
-  - [create a gmail accoount](https://accounts.google.com/signup) 
-  - [downgrade to less secure](https://myaccount.google.com/lesssecureapps?pli=1) after you are signed into the gmail account, downgrade to less secure
-2. **Couldinary URL**
-  - [create an account](https://cloudinary.com/)
-  - go to the dashboard and copy your API environmental variable
-   
-    <img width="1230" alt="image" src="https://user-images.githubusercontent.com/23039742/213839829-b4f349b3-419d-4ea2-bbca-90cf3c663bba.png">     
- 
+# Deployment 
 ## Fork and Clone the Repository
-🚀 **merit & beyond**
 To keep the main reposotory for this project clean, please fork the repostiory into your own account. GitHub has [forking directions](https://docs.github.com/en/get-started/quickstart/fork-a-repo#forking-a-repository) but here's what you might do:
 1. login to your own gitHub account
-2. navigate to [my repository](URL OF YOUR LIVE REPOSITORY)
+2. navigate to [my repository](https://github.com/PPindel/esports-teammates)
 3. In the top right corner of the page, click fork 
 
 ![image](https://user-images.githubusercontent.com/23039742/213840378-e785eaa0-712b-468c-bcda-64fde56eae44.png)
@@ -764,57 +746,55 @@ To keep the main reposotory for this project clean, please fork the repostiory i
 9. To get files to your local environment, you need to clone it: click the code button
 10. Copy the url as needed (here's gitHub instructions)[https://docs.github.com/en/get-started/quickstart/fork-a-repo#cloning-your-forked-repository}
 
-
-
-## Development Deployment 
-🚨**Required** 
-
-This section should describe the process someone would have to go through to get the local working in GitPod, or your preferred IDE. Start from installing the chrome extension then clicking the green gitpod button in THEIR FORKED repository, the enumerate the steps to walk them through the process as if they were brand new to this proccess. **Include screenshots** where applicable.
-
-**Key points to cover** 
+## Development Deployment
 - Install required python packages: `pip3 install -r requirements.txt`
 - Create env.py
-- What to put in the env.py, don’t disclose real values
->  - EMAIL_HOST_PASSWORD=<YOUR_VALUE>
->  - DEFAULT_FROM_EMAIL=<YOUR_VALUE>
->  - EMAIL_USERNAME=<YOUR_VALUE>
->  - SECRET_KEY=<YOUR_VALUE>
->  - CLOUDINARY_URL=<YOUR_VALUE>
->  - DEV=True
+- In env.py:
+>  - os.environ["SECRET_KEY"] = "<YOUR_VALUE>"
+>  - os.environ["CLOUDINARY_URL"] = "<YOUR_VALUE>"
+>  - os.environ["DATABASE_URL"] = "<YOUR_VALUE>"
 - Apply Database Migrations so the database starts up `python3 manage.py migrate`
 - Create a super user so you can add and inspect things via django admin  `python3 manage.py createsuperuser`
 - Preload data: Sometimes you might want to include steps to create data in the admin or preload a data dump [coderwall blog](https://coderwall.com/p/mvsoyg/django-dumpdata-and-loaddata) has examples on how to dump data and load it which saves a bunch of time when deploying the application from a local database to a hosted database but you don’t  have to do this step
 - Start the server `python3 manage.py runserver`
 
-
 ## Production Deployment
-🚨**Required** 
+- create new Heroku app
 
-This section should describe the process you went through to deploy the project to a server where anyone can access the url without your machine running. This is typically Heroku. **Include screenshots** if you think they would make the process easier. Start with getting an heroku account and then setting up databases and other packages.
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/3f4174b5-8e47-445b-a66a-207e2fe84fc6)
 
-If you have project settings required for Heroku, provide a table of the keys and values. Do not share your personal
-keys but either cut them out of the screenshot or say <YOUR_VALUE> and include links on how the user would obtain such
-values.
+- set app name and select your region
 
-**Key points to cover** 
-- cerating new app
-- setting app name
-- setting region
-- entering dreaded billing info
-- subscribing to a plan
-- setting up db
-- adding environmental values- have a list or table so user has less chance of typos
->  - EMAIL_HOST_PASSWORD
->  - DEFAULT_FROM_EMAIL
->  - EMAIL_USERNAME
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/19841c4c-3ad8-47a1-ab01-310e5d9aaedb)
+
+- login to ElephantSQL, access the dashboard and create a new instance (input a name, select a region), then return to dashboard, copy the database URL
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/3a9ac5d3-14bb-4ef3-87b7-62bcc398fbce)
+
+- login to Cloudinary, access the dashbord and copy your API key
+- 
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/c1069f1a-9bdb-41e4-bb35-ad0bc7c6e14f)
+
+- add environmental values (some of variables are identical as in your env.py file)
 >  - SECRET_KEY
 >  - CLOUDINARY_URL
+>  - DATABASE_URL
 >  - COLLECT_STATIC
-- adding build packages
-- deploy
-- gitHub connection
-- auto vs manul deploy
-- monotior logs
+>  - Port
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/a5fa519b-827e-4377-9729-7717880564d5)
+
+- add build packages
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/101d23b5-f300-42a1-abe1-83737b695627)
+
+- connect to github
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/9c005f23-ef9b-4e6d-aefa-f559254d291e)
+
+- deploy! (remember to watch monitor logs for any deployment issues)
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/07141992-6ee6-48b5-8332-4b9d7a81c63b)
 
 # Credits
 
@@ -829,7 +809,7 @@ values.
 ## Media
 
 - https://pexels.com
-- (users can add their own pictures to Team Ads, so I cannot point the source of some images...)
+- (users can add their own pictures to Team Ads, so I cannot point the source of all images...)
 
 ## Acknowledgments
 
