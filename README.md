@@ -1,121 +1,3 @@
-# OVERVIEW
-
-This template was made as a guide to help ensure you cover assessment criteria in your fourth portfolio write up. It is specific to the **PORTFOLIO 4: Full-Stack Toolkit** project.
-
-There still is not an official readme example for this Project Provided by CI.
-
-
-Sections marked as 🚨**Required** and 🚀 **merit & beyond**
-
-**Please note** that project assessment criteria changes more often than these guides are updated so double-check the submission criteria before assuming the  🚨**Required**  is all you have to do to pass.
-
-
-## Helpful tools
-
-### PDB Debugging
-Here’s a [cheatsheet](https://kapeli.com/cheat_sheets/Python_Debugger.docset/Contents/Resources/Documents/index) on how to navigate into functions and to the next line using pdb.
-
-This video shows you how to set a trace and then use the print() to evaluate variables
-
-https://user-images.githubusercontent.com/23039742/212526614-f3d19b8a-6841-43d4-a527-bfb6da95e0ad.mp4
-
-
-
-### Screenshots and Videos
-**Here’s a great video on how to add videos to your readme! no need to convert to gifs!!**
-
-https://www.youtube.com/watch?v=G3Cytlicv8Y
-
-> 1. record a video via slack
-> 2. download it
-> 3. in github, edit your readme via the pencil icon
-> 4. type a place holder word and highlight it
-> 5. drag and drop mp4 file over that text
-> 6. scroll down to the commit area
-> 7. update the default commit message
-> 8. click the green button
-> 9. ```git pull``` changes to your gitpod workspace
-
-**You can do the steps 3-9 for the image/screenshot uploads too!**
-
-### Cheatsheets and Auto Generation Tools
-
-Markdown's not all that easy so sometimes you may want to use some tools to make tables.
-
-- [Markdown Cheatsheet](https://guides.github.com/features/mastering-markdown/)
-- [markdown table generator](https://www.tablesgenerator.com/markdown_tables) - used to help with documentation table
-  formatting
-- [markdown table of contents generator](https://luciopaiva.com/markdown-toc/) - used to create table of
-  contents (be weary these tools have some bugs if you have dashes or trailing spaces in your headers)
-- [readme.so](https://readme.so/) - if you don't want to learn markdown, this tool might help you
-
-# GUIDE's Table of Contents
-- [PROJECT_NAME](#project_name)
-  - [Live Site](#live-site)
-  - [Repository](#repository)
-  - [Author](#author)
-- [Table of Contents](#table-of-contents)
-- [UX](#ux)
-  - [Target Audience](#target-audience)
-  - [Design Choices](#design-choices)
-    - [Colors](#colors)
-    - [Typography](#typography)
-    - [Images](#images)
-    - [Design Elements](#design-elements)
-    - [Animations and Transitions](#animations-and-transitions)
-    - [Frameworks](#frameworks)
-    - [Custom Styles](#custom-styles)
-    - [Custom Javascript](#custom-javascript)
-  - [Wireframes](#wireframes)
-- [Information Architecture](#information-architecture)
-  - [Entity Relationship Diagram](#entity-relationship-diagram)
-  - [Database Choice](#database-choice)
-  - [Data Models](#data-models)
-  - [CRUD Diagrams](#crud-diagrams)
-- [Agile Process](#agile-process)
-  - [Project Goals](#project-goals)
-  - [Initial User Stories](#initial-user-stories)
-  - [Feasibility vs Importance](#feasibility-vs-importance)
-  - [Scope](#scope)
-  - [Agile Tool](#agile-tool)
-    - [User Story Example](#user-story-example)
-    - [Epic Stories](#epic-stories)
-- [Features](#features)
-  - [Implemented Features](#implemented-features)
-  - [Future Features](#future-features)
-  - [Testing](#testing)
-  - [Manual Testing](#manual-testing)
-  - [Compatibility and Responsive Testing](#compatibility-and-responsive-testing)
-  - [Accessibility Testing](#accessibility-testing)
-    - [Accessibility Audits](#accessibility-audits)
-    - [Keyboard Navigation](#keyboard-navigation)
-    - [Chrome Vox Reader](#chrome-vox-reader)
-  - [Core Web Vitals](#core-web-vitals)
-  - [Validation Testing](#validation-testing)
-    - [CSS Validation](#css-validation)
-    - [HTML Validation](#html-validation)
-    - [JavaScript Validation](#javascript-validation)
-    - [Python Validation](#python-validation)
-    - [JSON Validation](#json-validation)
-  - [Automated Testing](#automated-testing)
-  - [Defects](#defects)
-  - [Defects of Note](#defects-of-note)
-  - [Outstanding Defects](#outstanding-defects)
-- [Technologies Used](#technologies-used)
-  - [Languages](#languages)
-  - [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
-- [Deployment](#deployment)
-  - [Prerequisites](#prerequisites)
-  - [Fork and Clone the Repository](#fork-and-clone-the-repository ) 
-  - [Local Deployment](#local-deployment)
-  - [production Deployment](#production-deployment)
-- [Credits](#credits)
-  - [Content](#content)
-  - [Media](#media)
-  - [Acknowledgments](#acknowledgments)
-  
-====================================== The Sections you Fill in are below ==============================
-
 # Esports Teammates
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/30be1f01-4b22-45ff-9455-95161df96fea)
 
@@ -597,77 +479,120 @@ SEO is greatly impacted by your core web vitals. The readout from https://web.de
  You should talk about the results for each section pay attention to 
 
 ## Validation Testing
-🚨**Required** 
-
-In this section you should write up any websites you used to validate your code and include screenshots.
-
-**Validation issues are an automatic failure** You should run these about 3 times:
-- when you first deploy your site
-- just when you think you are done testing
-- right before you submit because 😼, ⚽, 🐶 & 👼 can eliminate a closing tag or curly bracket without you noticing.
-
 ### CSS Validation
-🚨**Required** 
-
 The [Jigsaw validator](https://jigsaw.w3.org/css-validator/) was used to validate CSS.
+No errors were found.
 
-> If you only have one CSS file, you can just run the validator through one deployed page URL, if you have custom CSS for different pages, make sure you hit those different URLS, or do direct input on each file.
-
-Include a screenshot for each CSS file which includes the Green no ERRORS bar, two check marks:
-
-**styles.css**
-![img.png](documentation/images/css-validation.png)
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/4700efa2-1821-44f0-9ec3-219209e85671)
 
 ### HTML Validation
-🚨**Required** 
-
 The **[W3 HTML Validator](https://validator.w3.org/)** was used to validate HTML by coping the page source as a direct input.
+No errors were found.
 
-> For each view you wrote, you should validate the HTML and have a test case for it linked to from here
-> NOTE: You may need to right-click to view the source of each page and paste that into the validator if you need to go through authentication to get to the page.
+Landing page:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/068dfa08-fcc7-4fde-8d80-fae7abe3c19a)
+
+Signup page:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/a1010812-5d6e-4aa2-a84a-e54ae28c5b1a)
+
+Login page:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/859d4764-485e-4e6e-8c25-c94707aec4a8)
+
+Home page:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/f824bb0c-b579-4091-8d89-f427f67375e3)
+
+Team Detail page:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/49ac477d-a53b-47d3-894b-8bfd35420d4d)
+
+Add Team Ad page:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/d0e4cdc0-59d1-4bd6-b07e-55d6c2770f07)
+
+Sign out page:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/97f7e5ed-a91e-4e3f-b297-d3474c89168b)
+
+Edit Team Ad page:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/7429242d-a9d3-4a3c-bbd1-eb9f4e0b10f9)
+
+Delete Team Ad page:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/ae031252-c0e9-482f-a1cf-e6c1589c9db6)
+
+Edit comment page:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/2e6e214c-650a-4802-9f6a-d9258a51e89a)
+
+404 error page:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/47305e86-41f4-4bf5-abcf-ed75ecd0e32a)
 
 ### JavaScript Validation
-🚨**Required** 
+The **[Jshint validator](https://jshint.com)** was used to validate the JS function.
+No errors were found.
 
-The **[Jshint validator](https://jshint.com)** was used to validate each JS file.
-
-> for each .js file, copy the code and paste it into this site, and have a test case for it linked to from here. You can have warnings, but no errors.
-> if using ES6, add this before pasting in your file: `/*jshint esversion: 6 */ `, similarly you can update it to 7 if you see warnings about ES7 syntax `/*jshint esversion: 7 */ `
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/5b02c45b-428f-4f8a-b204-4e224443ba9f)
 
 ### Python Validation
-🚨**Required** 
-
 **[CI's pep8 tool](https://pep8ci.herokuapp.com/)** was used to validate each .py file created.
+No errors were found.
 
-> for each .py file you created, copy the source code and paste it into this site, and have a test case for it linked to from here.
-> include a screenshot of results in the test case showing NO ERRORS. (you should do this for all .py files in your repo
+In Blog folder:
+admin.py:
 
-**run.py**
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/0f96eabe-e1c3-4683-9010-00145026a624)
 
-![image](https://user-images.githubusercontent.com/23039742/212106175-36b2f18a-7c75-458d-94dd-9886e81c71f3.png)
+apps.py:
 
-Ideally you would have no errors remaining outside of line too long which you can fix by 
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/e549cfd6-bfe7-4c42-a390-1523579e7db7)
 
-adding
-```$python 
-# noqa
-```
-There is a space before the # and after it to skip the quality assurance for that line.
+forms.py:
 
-Note any errors or warnings you are ignoring and why.
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/cb067742-55c6-4099-ae00-685f7a43b4f8)
 
-### JSON Validation
-🤷‍ **Required if you made some files** 
-The **[JSONLINT validatior](https://jsonlint.com/)** was used to validate JSON files.
+models.py:
 
-> for each .json file, you should copy the code and paste it into this site, and have a test case for it linked to from here.
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/e94fc459-d7d2-4475-870f-08768aac46d1)
 
-## Automated Testing
-🚀 **merit & beyond**
+urls.py:
 
-If you managed to write jasmine tests or some django tests, note those files out here and how to run them. I only did this in my last project as I didn't have the time or energy to learn how to write tests. https://github.com/maliahavlicek/ms4_challenger/blob/master/documentation/TESTING.md is my write-up about those and how I ran them, but a simple test I'd recommend is authentication and any views you limit to superusers or logged-in users:
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/f31620f9-39e4-437e-9ae9-dee39ddcba3b)
 
-https://github.com/maliahavlicek/ms4_challenger/blob/master/challenges/tests/test_views.py
+views.py:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/f09d16da-35ff-4d20-a84b-8d0b76776c64)
+
+In teamfinder folder:
+asgi.py:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/e322521c-b17e-4a2b-9769-2e8f2b58a4e9)
+
+settings.py:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/0cffe5e8-7e2f-454e-8f6b-01276bd7e2a6)
+
+urls.py:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/bbf374c9-7d6a-4c44-80e0-3f0b85b80f44)
+
+util.py:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/75e90b6a-2178-495e-b369-322e7928bfa3)
+
+wsgi.py:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/4687d15d-375d-47b6-a7fe-f7be66f89c2e)
+
+In main folder:
+manage.py:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/cd2f8062-c6c1-4495-92a5-6a04f47d6be9)
 
 ## Defects
 🚨**Required** 
