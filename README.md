@@ -701,7 +701,6 @@ If you know of something that isn't quite right, create an issue and link to it 
 
 Sometimes it's as simple, word wrapping issue that makes the site look odd at a certain screensize that you just didn't have time to fix due to the impending deadline it's best to mention it but note why you allowed it to go live: "Yes it looks odd, but it doesn't impact core functionality of the site." than to let the accessors think you didn't notice it. 
 
-
 # Technologies Used
 ## Languages
 - html
@@ -755,7 +754,6 @@ To keep the main reposotory for this project clean, please fork the repostiory i
 >  - os.environ["DATABASE_URL"] = "<YOUR_VALUE>"
 - Apply Database Migrations so the database starts up `python3 manage.py migrate`
 - Create a super user so you can add and inspect things via django admin  `python3 manage.py createsuperuser`
-- Preload data: Sometimes you might want to include steps to create data in the admin or preload a data dump [coderwall blog](https://coderwall.com/p/mvsoyg/django-dumpdata-and-loaddata) has examples on how to dump data and load it which saves a bunch of time when deploying the application from a local database to a hosted database but you don’t  have to do this step
 - Start the server `python3 manage.py runserver`
 
 ## Production Deployment
@@ -772,7 +770,7 @@ To keep the main reposotory for this project clean, please fork the repostiory i
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/3a9ac5d3-14bb-4ef3-87b7-62bcc398fbce)
 
 - login to Cloudinary, access the dashbord and copy your API key
-- 
+
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/c1069f1a-9bdb-41e4-bb35-ad0bc7c6e14f)
 
 - add environmental values (some of variables are identical as in your env.py file)
@@ -804,7 +802,7 @@ To keep the main reposotory for this project clean, please fork the repostiory i
 - https://learndjango.com - code solutions
 - https://github.com/CaraMcAvinchey/stem-and-leaf-blog - some code inspirations
 - https://www.youtube.com/@Codemycom - Create A Simple Django Blog by John Elder
-- [Code Institute Template](https://github.com/Code-Institute-Org/python-essentials-template](https://github.com/Code-Institute-Org/gitpod-full-template)
+- https://github.com/Code-Institute-Org/gitpod-full-template - Code Institute Template
 
 ## Media
 
