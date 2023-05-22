@@ -105,6 +105,8 @@ https://github.com/users/PPindel/projects/4
   - pytz==2022.7.1
   - requests-oauthlib==1.3.1
   - sqlparse==0.4.3
+  - django-extensions==3.2.1
+  - graphviz==0.20.1
 
 
 ## Wireframes
@@ -132,13 +134,7 @@ Some of the details were changed in final product.
 
 # Information Architecture
 ## Entity Relationship Diagram
-🚨**Required** 
-
- [draw.io](https://app.diagrams.net/) is a free tool that can help you draw up an ERD concerning your custom model.
-
-Wade Williams wrote a great [blog]( https://wadewilliams.com/technology-software/generating-erd-for-django-applications/) on how to add a django extension to auto create an ERD. 
-
-You can always draw one out by hand or in google sheets. 
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/c246472a-40b9-4172-838d-bf5c0533515d)
 
 ## Database Choice
 - postgres as the database because the data is relational
@@ -165,123 +161,26 @@ Users can also edit and delete TeamAds and Comments (only if they are the author
 
 Default django signup form is slightly upgraded.
 
-## CRUD Diagrams
-🚀 **merit & beyond**
-
-You can also have CRUD diagrams to show the accessors visually how the model is
-used in your site.
-
-I used [draw.io](https://app.diagrams.net/) and hooked it up to my google drive to create the screenshot below
-
-> ![image](https://user-images.githubusercontent.com/23039742/154406188-c9beb57a-2fd1-4f26-a8ed-bee320e46e3d.png)
-
 # Agile Process
-🚨**Required** 
-
 ## Project Goals
-🚨**Required** 
-
-This project was built to do something. Show blogs, engage users, track bookings, share recipes, provide admins nice ways to add/update/delete records. Privately store information.  Write out the purpose of this site.
-
-Project Goals sum up what you expect different users to do on your site.
-- some just come and read things related to your topic.
-- some users are administrating the site (adding, updating & deleting models)
-- some users are registered, so they manage information of their choice, interact with others, do a certain tasks
-
-**what to keep in this section**
-Document your project goals by one of the following methods:
-- List the project goals by type of users
-- Flat list 
-- Quick paragraph
+- users can create and read posts (TeamAds)
+- users can edit and delete their posts
+- users can comment created posts
+- users can edit and delete their own comments
+- admin can do all of the above for any post or comment
 
 ## Initial User Stories
-🚨**Required**
+https://github.com/users/PPindel/projects/4
+All user stories are marked to show the importance.
 
-To start the agile process this section kicks off with a bullet list/brainstorming dump about features you'd like to have. EVERYTHING write them out in bullet form:
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/13b9da32-d2ef-4de6-bec6-f98f219c21fa)
 
-- As a 'user type' I 'to perform an action' so that I can 'achieve a goal'
-
-You can put this into a googlesheet and link to it.
-
-**User Story Examples**
-
-- [radiology booking](https://github.com/DeannaCarina/ELHTRadiology#user-stories)
-- [places/events searching site](https://github.com/maliahavlicek/what2do2day#user-stories)
-
-## Feasibility vs Importance
-🚀 **merit & beyond**
-
-To scope the project for a MVP (minimally viable product) a feasibility analysis was done.
-
-The features in the table below have been taken from the user stories above. Generic features found in most websites
-will also be implemented such as nav-bar, footer, obvious website purpose etc.
-
-| Opportunity/Feature | Feasibility/Viability (score out of 5) | PurposeLevel of Importance (score out of 5) | In Or Out |
-|---------------------|----------------------------------------|---------------------------------------------|-----------|
-|                     |                                        |                                             |           |
-|                     |                                        |                                             |           |
-|                     |                                        |                                             |           |
-|                     |                                        |                                             |           |
-
-> You should discuss the outcome of what you will be dropping based on the outcome. Making a scatter plot of the scores and coloring the dot 
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/06993db0-9099-4a91-93b1-82aa83421655)
 
 ## Scope
-🚀 **merit & beyond**
-
-Now you have to talk about the scope to reduce things more, you don't necessarily need all the bells and whistles, they could be beyond your skill set. Think basic stuff. Write a paragraph to sum up how you morphed the project goals into a prioritized list of user stories that would be delivered as an MVP (minimal viable product).
-
-## Agile Tool
-🚨**Required** 
-
-You are required to use an agile tool to track user stories through the development process. You could use a spreadsheet, JIRA, or another tool, and CI taught you how to use GitHub Issues to write your user stories.
-
-- State what tool you used (GitHub, Jira, Rally, Trello, a spreadsheet)
-- Include a link to the tool's product/progress board
-- Include a screenshot of the tool's product/progress board
-
-Lessons on how to use gitHub for a product board can be found in the LMS system under:  
-- Principles of Agile Development > 
-  - Common Agile Practices > 
-    - Product Backlog
-
-### User Story Example
-🚨**Required** 
-
-- include a screenshot of a user story with all it's details
-
-If you made a template, call that out and provide:
-- link to template
-- screenshot of template
-
-### Epic Stories
-🚀 **merit & beyond**
-
-If you want a chance at  **DISTINCTION**, you need to have epic stories to stories with tasks.
-
-Example:
-EPIC: Navigation As a user, I want to have easy to see navigation on the page, so I can intuitively interact with the site without getting frustrated both on mobile and desktop devices.
-
-USER STORY: Navigation: Unauthenticated user: As an unauthenticated user I want to see what the site is about, and easily figure out how access more information. 
-
-Tasks:
-- [ ] Build Template so information in one spot
-- [ ] Rough in Logo
-- [ ] Add in Register/Login/Forgot Password
-- [ ] Add Main List Page
-- [ ] Rough in CSS
-
-Acceptance Criteria
-- [ ] navigation sticks in view as user scrolls
-- [ ] looks good on mobile
-- [ ] looks good on desktop
-- [ ] links work & go where expect
-- [ ] passes accessibility
-
-**What to keep in this section**
-- screenshot of epic story
-- EPIC TEMPLATE screenshot
-- link to EPIC TEMPLATE
-
+When I started my project I was very ambitious to develop a complete portal for gamers to search online for friends, teams and improve their skills. I imagined custom applications, profiles, filtering tools, game sections, guilds, and many more...
+But in the middle of developing, I realized that this may take much more time than I had to make it good.
+I've created a functional website working similarly to a blog website where people can connect and make an advert. All previous ideas are still in GitHub user stories for this project.
 
 # Features
 🚨**Required** 
@@ -580,7 +479,7 @@ manage.py:
 
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/cd2f8062-c6c1-4495-92a5-6a04f47d6be9)
 
-## Defects
+# Defects
 🚨**Required** 
 
 At this point you need to be using GITHUB's Issues to track these as it helps you with the AGILE process requirement and it's really easy to copy/paste screenshots in and then write up how you closed them.
