@@ -141,25 +141,25 @@ Some of the details were changed in final product.
 - heroku servers
 
 ## Data Models
-![image](https://github.com/PPindel/esports-teammates/assets/114284732/cd7e1773-fa8b-44ef-9e01-fa62dbdfcc31)
-
 Users can create and read their own Team Ad, select the title, game, role, skill level, write a description and upload custom image to the ad.
 
-![image](https://github.com/PPindel/esports-teammates/assets/114284732/458a31f8-07f7-47f5-8293-07c0fbe95856)
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/cd7e1773-fa8b-44ef-9e01-fa62dbdfcc31)
 
 Unique slug generator function to prevent 2 identical slugs at the same time.
 
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/458a31f8-07f7-47f5-8293-07c0fbe95856)
+
+Users can write comments under Team Ads.
+
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/0ad23a35-b1f3-4a19-920a-049a532018ec)
-
-Users can write a comments under Team Ads.
-
-![image](https://github.com/PPindel/esports-teammates/assets/114284732/52af4858-2fa7-4a72-8470-ad3e43bbd14d)
 
 Users can also edit and delete TeamAds and Comments (only if they are the authors - access is protected).
 
-![image](https://github.com/PPindel/esports-teammates/assets/114284732/bbd833f2-f34f-4200-9904-17c9c35bccc8)
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/52af4858-2fa7-4a72-8470-ad3e43bbd14d)
 
 Default django signup form is slightly upgraded.
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/bbd833f2-f34f-4200-9904-17c9c35bccc8)
 
 # Agile Process
 ## Project Goals
