@@ -87,24 +87,24 @@ https://github.com/users/PPindel/projects/4
 - Bootstrap
 - Django
 - req.txt:
-  asgiref==3.6.0
-  cloudinary==1.32.0
-  crispy-bootstrap5==0.7
-  dj-database-url==0.5.0
-  dj3-cloudinary-storage==0.0.6
-  Django==3.2.18
-  Django-Accounts==0.1
-  django-allauth==0.53.1
-  django-crispy-forms==1.14.0
-  django-summernote==0.8.20.0
-  gunicorn==20.1.0
-  oauthlib==3.2.2
-  psycopg2==2.9.5
-  PyJWT==2.6.0
-  python3-openid==3.2.0
-  pytz==2022.7.1
-  requests-oauthlib==1.3.1
-  sqlparse==0.4.3
+  - asgiref==3.6.0
+  - cloudinary==1.32.0
+  - crispy-bootstrap5==0.7
+  - dj-database-url==0.5.0
+  - dj3-cloudinary-storage==0.0.6
+  - Django==3.2.18
+  - Django-Accounts==0.1
+  - django-allauth==0.53.1
+  - django-crispy-forms==1.14.0
+  - django-summernote==0.8.20.0
+  - gunicorn==20.1.0
+  - oauthlib==3.2.2
+  - psycopg2==2.9.5
+  - PyJWT==2.6.0
+  - python3-openid==3.2.0
+  - pytz==2022.7.1
+  - requests-oauthlib==1.3.1
+  - sqlparse==0.4.3
 
 
 ## Wireframes
@@ -131,10 +131,6 @@ Register page:
 Some of the details were changed in final product.
 
 # Information Architecture
-🚨**Required** 
-
-As part of the requirements for this project you need to have at least **1 original data model**. It's this section that discusses your data and how each piece relates to another and draws out the CRUD functionality you built.
-
 ## Entity Relationship Diagram
 🚨**Required** 
 
@@ -145,39 +141,29 @@ Wade Williams wrote a great [blog]( https://wadewilliams.com/technology-software
 You can always draw one out by hand or in google sheets. 
 
 ## Database Choice
-🚨**Required** 
-
-Just state you used postgres as the database because the data is relational and heroku serves this up reactively easily with no cost. (this might be changing as Sales Force takes over in November 2022)
+- postgres as the database because the data is relational
+- heroku servers
 
 ## Data Models
-🚨**Required** 
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/cd7e1773-fa8b-44ef-9e01-fa62dbdfcc31)
 
-Show the accessors you know your data. If you end up using some data models from an example project, call that out and don't be as detailed about writing those up unless you added to them.
+Users can create and read their own Team Ad, select the title, game, role, skill level, write a description and upload custom image to the ad.
 
-Each data model that you created yourself and customized should have its Fields, Field Type and any validation documented. You should also cross-reference any code in your repository that relate to CREATE, READ, UPDATE, DELETE operations for these models.
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/458a31f8-07f7-47f5-8293-07c0fbe95856)
 
-You can try to use markdown, or just take a screenshot from a Google spreadsheet.
+Unique slug generator function to prevent 2 identical slugs at the same time.
 
-Below is an example of a write-up for an Activities Data Model
-> **Activities Model**
-> Activities is a table to hold a unique icon image and name values that users have associated with events and places. It helps with sorting events and prevents the need from carrying around two data objects in the larger Events and Places data structures. The purpose of an Activities object is to provide an imagery association to a category.
->
-> | DB Key    | Data Type    |          Purpose            | Form Validation                            | DB processing        |
-> |--------	|:---------:	|:-------------------------:	|----------------------------------------	|------------------	|
-> | _id        | ObjectId    | unique identifier            | None                                    | n/a                |
-> | name    | String        | Name of Activity            | Required<br>Min 1 char<br>Max 50 chars    | trim<br>to lower    |
-> | icon    | String        | system path to image file    | Required                                |                  	|
->
-> Activity entries are used by events, places and filtering.
->
-> - [x] Create - An activity is potentially created when a user successfully creates a place, creates an event, updates an event, or updates a place.
-> - [x] Read - The Activities table is read when a user is adding an event, updating an event, adding a place or updating a place, to determine if a new value should be created or not. The activities table is queried for using the name and icon pair, if it is found, the ObjectId is passed to the event and places. If no match is found, a new Activity is created and that ObjectID is passed to the place or event.
-> - [ ] Update
-> - [ ] Delete
-    >
-    >  This table has no deletion or updates associated with it. It's strictly create and read. Eventually, maintenance scripts should be written to delete unused/deprecated entries.
->
-> The reading/writing of the activities table is housed in the [what2do2day/activities/views.py](what2do2day/activities/views.py) file.
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/0ad23a35-b1f3-4a19-920a-049a532018ec)
+
+Users can write a comments under Team Ads.
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/52af4858-2fa7-4a72-8470-ad3e43bbd14d)
+
+Users can also edit and delete TeamAds and Comments (only if they are the authors - access is protected).
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/bbd833f2-f34f-4200-9904-17c9c35bccc8)
+
+Default django signup form is slightly upgraded.
 
 ## CRUD Diagrams
 🚀 **merit & beyond**
