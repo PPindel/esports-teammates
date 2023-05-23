@@ -183,34 +183,28 @@ But in the middle of developing, I realized that this may take much more time th
 I've created a functional website working similarly to a blog website where people can connect and make an advert. All previous ideas are still in GitHub user stories for this project.
 
 # Features
-🚨**Required** 
-
-In this section, you should go over the different parts of your project, and describe each in a sentence or so and how they tie into  your user stories.
-
 ## Implemented Features
-🚨**Required** 
-
-It's easiest to break this section down into the header, footer, and each page/layer/signification section of your website. Call out any differences for mobile vs desktop presentations, include a screenshot of the implemented feature.
-
-Don't forget your custom 404 error page
-
-Don't forget the 3 phases of navigation:
-- unauthenticated
-- general authenticated user
-- superuser authenticated
-
-And don't forget Defensive programming bits
-- validation of form inputs
-- not allowing users to create, read, update and delete information they shouldn't
-
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
+- unauthenticated users can view only the landing page
+- defensive programming has been used to protect tampering pages without authentication
+- users can register an account
+- usernames and email addresses must be unique
+- a superuser account has been created (admin)
+- all users can create posts (Team Ads), edit and delete them (if they are authors, authentication is implemented)
+- all users can create a comment to existing post (Team Ad), edit and delete (if they are authors, authentication is implemented)
+- admin can edit or delete any post, comment or remove user from admin panel
+- site has a sticky navigation bar, main section and a footer
+- each page is customised (signup, login, logout)
+- 404 and 500 error pages are customised
+- profile page for every user to see data passed on registration
+- when creating a post (Team Ad), users can choose from list of games and skill levels
+- users can add their own image to a post (Team Ad)
 
 ## Future Features
-🚀 **merit & beyond**
-
-Use this section to discuss plans for additional features to be implemented in the future
-
-If you end up not developing some features you hoped to implement, you can include those in this section too.
+- team apply button and form. Currently, users can apply to join a team by comments, in the future I am planning to create an application form for this
+- search filter on top of the page to display particular game or skill level
+- Team Ad owners will be able to accept od reject a joing team application
+- more games and templates (as different games have different options, positions, etc.)
+- upgrade profile page so users can ad a description, skill level, favourite games, and comment counter
 
 ## Testing
 🚨**Required** 
@@ -322,46 +316,36 @@ The combinations above were chosen because of the following information I gather
   - console: 0.03%
 
 ## Accessibility Testing
-🚨**Required** 
+Accessibility features has been implemented to Esports Teammates.
+Aria labels and descriptions are added.
+The site is optimized for desktop and mobile devices, please see below the Lighthouse audits:
 
-Accessibility testing is aimed to make sure that those with visual or physical disabilities can still browse your website. Some users have had strokes or accidents that make it difficult to use a mouse, so they use keyboard keys to tab through sites. Others use screen readers that rely on HTML tags to help the user navigate quickly through the site to find information they want, others have color blindness or contrast issues. It's the law to provide services 
-Here's a [site](https://www.w3.org/WAI/fundamentals/accessibility-intro/#:~:text=Accessibility%20is%20Important%20for%20Individuals%2C%20Businesses%2C%20Society,-The%20Web%20is&text=That%20is%2C%20the%20accessibility%20barriers,older%20people) where you can learn more about accessibility and the internet.
+Desktop landing page:
 
-### Accessibility Audits
-🚨**Required** 
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/366cb896-4382-4024-aaeb-de4767f2ec81)
 
-Accessibility audits run through the HTML and determine if the parts of the WCAG (web content accessibility guidelines ) that are implemented through HTML tags and attributes are present. They can do some checking for low vision/contrast stuff too.
+Mobile landing page:
 
-You should run your deployed website pages through  at least on auditing tool. lighthouse's audit to check performance, accessibility, best practices and SEO scores. You should aim to get 85 or higher score on accessibility. 
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/646c8e7a-d185-4e3b-bd19-cb723e907022)
 
-**You should fix issues associated with:**
-- contrast 
-- aria labels
-- alt text
-- large images
-- skewed images
+Desktop main page:
 
-**Lighthouse**
-https://web.dev/measure/  If you have lower scores, read the report and follow the links to address the flagged issues. You can run this tool from Chrome Dev Tools too against your local machine, but chrome extensions can sometimes give you missing alt text on things like the grammarly plug in tracking pixel.
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/eeea49e8-4754-4704-88b2-a3c44d9efcc7)
 
-You want a score in the green for accessibility and should look at ways to get it to 100.
+Mobile main page:
 
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/6018dbd3-bef0-43d8-b85e-57579b81ad85)
 
-**[WAVE chrome](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh?hl=en-US) extension**
-Wave is developed by webaim.org and does a bit better at contrast issues and uses 2.1 guidelines
+Desktop team detail page:
 
-**Contrast Checkers**
-- https://webaim.org/resources/contrastchecker/
-- https://color.a11y.com/
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/386ba0e5-f2e8-4299-afe0-ab733616374a)
+
+Mobile team detail page:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/a92919f8-09b9-4b8a-9291-7db857b14587)
 
 ### Keyboard Navigation
 Esports Teammates is optimized for keyboard navigation!
-
-## Core Web Vitals
-🚀 **merit & beyond**
-
-SEO is greatly impacted by your core web vitals. The readout from https://web.dev/measure/ which is essentially a lighthouse audit gives your site scores in 4 categories. Ideally you want your site to be in the green for all 4 scores. web.dev has dedicated servers to test deployed sites without extensions that skew the results, so it's best to get results from this site.
- You should talk about the results for each section pay attention to 
 
 ## Validation Testing
 ### CSS Validation
