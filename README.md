@@ -217,42 +217,9 @@ If this section grows too long, you may want to split it off into a separate fil
 
 
 ## Manual Testing
-🚨**Required** 
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/b473d591-f60a-4a17-8f13-6cb30acf9aa7)
 
-For any scenarios that have not been automated, test the user stories/features manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios in markdown such as:
-
-**Manual Testing For Contact Form**
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
-
-Or you can use markdown check boxes and write them up per feature:
-
-**Manual Testing For Contact Form**
-- [x] try to submit 
-- [x] Try to submit the empty form and verify that an error message about the required fields appears
-- [x] Try to submit the form with an invalid email address and verify that a relevant error message appears
-- [x] Try to submit the form with all inputs valid and verify that a success message appears.
-- [x] no console errors
-- [x] submit goes to code institute data dump page in new tab
-- [x] looks good on mobile (one column)
-- [x] looks good on tablet (two columns)
-- [x] looks good on desktop (two columns but not SUPER HUGE)
-
-Or you can use a spreadsheet
-    
-Here is a [Manual Testing Template](https://docs.google.com/spreadsheets/d/1vc1IVL-ydQwWeWMqnk_GRox6HE6qxDLpchGse8Crayo/edit#gid=296578096) that you can use as a starting point to keep track of your testing efforts. Make a copy of it in your own account and update as needed to reflect the browsers you are testing and features.  
-
-It's ok to spot check specific functionality across devices and browsers but each page should be viewed as a whole for each device/browser combo at least once.
-
-A quick way to check if items are exceeding the screen width of a project is to run this javascript in the console for various screen emulations:
-
-```
-var docWidth = document.documentElement.offsetWidth;
-[].forEach.call(document.querySelectorAll('*'),function(el){if(el.offsetWidth > docWidth){console.log(el);}});
-```
+https://docs.google.com/spreadsheets/d/1cDYbaHAq-m419ljRykuiJm_YKTj6cpFw6ZTD3LT2aIM/edit?usp=sharing
 
 ## Compatibility and Responsive Testing
 🚨**Required** 
