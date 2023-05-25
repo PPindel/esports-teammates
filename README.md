@@ -206,81 +206,45 @@ I've created a functional website working similarly to a blog website where peop
 - more games and templates (as different games have different options, positions, etc.)
 - upgrade profile page so users can ad a description, skill level, favourite games, and comment counter
 
-## Testing
-🚨**Required** 
-
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the Features section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
-
-**At this point, you should use gitHub Issues Templates** to track test cases and defects. Here's a [document](https://docs.google.com/document/d/1nDS5tZeMO77Dfq85IZGMSV6C41XaPm9FwcpR3k-UTVc/edit#heading=h.3kdbr3tqbzi) I put together for this process.
-
-
+# Testing
 ## Manual Testing
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/b473d591-f60a-4a17-8f13-6cb30acf9aa7)
 
 https://docs.google.com/spreadsheets/d/1cDYbaHAq-m419ljRykuiJm_YKTj6cpFw6ZTD3LT2aIM/edit?usp=sharing
 
 ## Compatibility and Responsive Testing
-🚨**Required** 
 
->To save time, you can create this type of table in [markdown table generator](https://www.tablesgenerator.com/markdown_tables)
->
->As of Feb 14, 2022 CI students can take advantage of the Student Developer Pack where you have access to great things like [browserstack](https://education.github.com/pack/offers/#browserstack) You should have received an email about how to activate your student Developer Pack, here's a [slack](https://code-institute-room.slack.com/archives/C0L316Z96/p1644946870567999) with details if you can't find it in the associated thread.
+Iphone 12, Safari:
 
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/550f216d-7465-4a46-b4d0-2e790c8afad5)
 
-Minimally you should use dev tools and emulators to try to test you site on various screen sizes and browsers and note it in a table:
+Iphone 14 Pro, Safari:
 
-I ensured my site was worked well, and looked nice on a variety of devices & browsers as noted in the table below:
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/ac0cbf3b-6991-4a16-a556-bd87f224c420)
 
-| TOOL / Device                 | BROWSER     | OS         | SCREEN WIDTH  |
-|-------------------------------|-------------|------------|---------------|
-| real phone: motog6            | chrome 78   | android 8  | XS 360 x 640  |
-| browser stack: iPhone5s       | safari  13  | iOs        | XS 320 x 568  |
-| dev tools emulator: pixel 2   | firefox  69 | android 8  | SM 411 x 731  |
-| browserstack: iPhone 10x      | Chrome 78   | iOs 11     | SM 375 x 812  |
-| browserstack: nexus 7 - vert  | Chrome 78   | android 7  | M 600 x 960   |
-| real tablet: ipad mini - vert | safari  13  | iOs 6      | M 768 x 1024  |
-| browserstack: nexus 7 - horiz | firefox 69  | android 7  | LG 960 x 600  |
-| chrome emulator: ipad - horiz | safari 13   | iOs        | LG 1024 x 768 |
-| browserstack windows PC       | Chrome 78   | windows 10 | XL 1920 x 946 |
-| real computer: mac book pro   | safari 12.1 | Mohave     | XL 1400 x 766 |
-| browserstack windows pc       | IE Edge 88  | windows 10 | XL 1920 x 964 |
+Ipad 11 Pro, Safari:
 
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/4d0dda90-425c-4c68-bab7-a78427e0b13e)
 
-🚀 **merit & beyond**
-Document why you chose the devices:
+Samsung Galaxy S21, Chrome:
 
-1. Visit https://gs.statcounter.com/browser-market-share to figure out the most popular browsers & operating system combos seen across the web for the geographic region, and platform(s) and screen sizes you expect your users to belong to. 
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/dcb15eec-2947-4a9e-91e3-753061c593e5)
 
-2. Include a sentence about why you chose the combinations you did.
+Google Pixel 7, Chrome:
 
-3. Create a table that lists out what devices, browsers, and operating system you tested your application on and a brief description of why you chose the mixture you did. The point is to prove that you looked at the site across various browsers, operating systems, and viewport breakpoints.
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/556184ff-dc29-4289-8589-93ae6d4c3e8e)
 
-4. if you can't find the browser/device/OS combinations you want on Browserstack with your GitHub student webpack (or you didn't activate that in time), note what you'd ideally test on then what you ended up testing on as a compromise. 
+Desktop, Windows 11, Chrome:
 
-5. Build a table to summarize the choices you made [markdown table generator](https://www.tablesgenerator.com/markdown_tables)
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/c9813b9a-dbc8-4e12-93ba-1c1c6b1ae2e6)
 
-The combinations above were chosen because of the following information I gathered  from [ga.statcounter.com]( https://gs.statcounter.com/browser-market-share) for the US from Aug-Oct 2021:
-**browser Version Market Share**:
-  - safari iphone: 26.32%
-  - chrome for android: 21.32%
-  - Chrome 105.0: 15.77%
-  - Chrome 104.0: 6.28%
-  - Edge 105: 4.99%
-  - Safari 15.6 3.76%
-**browser Market Share**
-  - chrome: 50.28%
-  - Safari: 34.65%
-  - Edge: 6.37%
-  - Firefox: 3.52%
-  - Samsung Internet: 2.04%
-  - Opera: 0.89%
-**platform breakdown**
-  - mobile: 51.26%
-  - desktop: 45.73%
-  - tablet: 2.97%
-  - console: 0.03%
+Source: https://live.browserstack.com
+
+As the most popular browsers in Europe are Chrome and Safari, I deceided to focus on these 2 browsers.
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/61dd5783-ab40-46a8-96c0-383f69f5834c)
+
+Source: https://gs.statcounter.com/browser-market-share/all/europe
 
 ## Accessibility Testing
 Accessibility features has been implemented to Esports Teammates.
@@ -564,6 +528,7 @@ To keep the main reposotory for this project clean, please fork the repostiory i
 - https://github.com/CaraMcAvinchey/stem-and-leaf-blog - some code inspirations
 - https://www.youtube.com/@Codemycom - Create A Simple Django Blog by John Elder
 - https://github.com/Code-Institute-Org/gitpod-full-template - Code Institute Template
+- https://live.browserstack.com - live testing devices
 
 ## Media
 
