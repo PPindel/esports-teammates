@@ -6,6 +6,7 @@ from teamfinder.util import unique_slug_generator
 from django.db.models.signals import pre_save
 from django.dispatch import receiver
 from django.conf import settings
+from django.core.validators import RegexValidator
 
 STATUS = ((0, "Draft"), (1, "Published"))
 User = settings.AUTH_USER_MODEL
@@ -40,7 +41,7 @@ class TeamAd(models.Model):
         ('Smite', 'Smite'),
         ('Dark and Darker', 'Dark and Darker'),
     ]
-    title = models.CharField(max_length=200)
+    title = models.CharField('title (no special chars)', max_length=200, validators=[RegexValidator('[!@#$%^&*-_+=]', inverse_match=True)])  # noqa E501
     slug = models.SlugField(max_length=200)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="team_ad")  # noqa E501
     game = models.CharField(max_length=25, choices=GAMES, default='League of Legends')  # noqa E501

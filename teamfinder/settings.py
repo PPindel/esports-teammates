@@ -36,7 +36,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['esports-teammates.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['esports-teammates.herokuapp.com', '8000-ppindel-esportsteammate-6wo4dfmeucr.ws-eu98.gitpod.io']  # noqa E501
 
 
 # Application definition
