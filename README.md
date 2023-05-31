@@ -41,50 +41,6 @@ Fonts used:
 - Permanent Marker for modern and attractive design
 - Ubuntu for clear and readable content
 
-### Design Elements
-The site has a common navbar (sticky to the top when scrolling), and footer.
-
-![image](https://github.com/PPindel/esports-teammates/assets/114284732/e160e81d-07f4-4581-98c0-0ba1cbb484b4)
-![image](https://github.com/PPindel/esports-teammates/assets/114284732/d604e5db-cefe-424b-a328-56ed0d9f2965)
-
-Up to six posts per page, two rows of three posts for desktops, and one column for mobile phones.
-
-![image](https://github.com/PPindel/esports-teammates/assets/114284732/a1bc8c5e-24a9-4d48-aa38-dc9c1bf73e1b)
-![image](https://github.com/PPindel/esports-teammates/assets/114284732/60bdad1b-6473-4965-a7fb-cbae164b295d)
-
-Landing page for not authenticated users:
-
-![image](https://github.com/PPindel/esports-teammates/assets/114284732/3a38c9fb-76dd-4564-b91c-3ee9995a1ca3)
-
-Buttons are changing colors when hovering over:
-
-![image](https://github.com/PPindel/esports-teammates/assets/114284732/9ad37536-54e1-4608-8fc4-c655162a72dd)
-![image](https://github.com/PPindel/esports-teammates/assets/114284732/eba8cb26-a89f-4147-b69f-fce54cc0c267)
-
-All default Django pages (signup, login, etc.) are customised:
-
-![image](https://github.com/PPindel/esports-teammates/assets/114284732/906e3e34-96da-4922-80e3-dca435e099d8)
-
-Custom 404 and 500 error pages:
-
-![image](https://github.com/PPindel/esports-teammates/assets/114284732/9621e955-8577-4f84-81ef-e5cc63612f3d)
-![image](https://github.com/PPindel/esports-teammates/assets/114284732/031702af-1700-413f-8b42-0c3475748df3)
-
-JS script for alerts:
-
-![image](https://github.com/PPindel/esports-teammates/assets/114284732/a05ee5b3-523b-44d1-8896-f55e322a273c)
-
-Simple profile page:
-
-![image](https://github.com/PPindel/esports-teammates/assets/114284732/e874c26c-b37b-4668-a805-44f3b9f524d3)
-
-Admin page:
-
-![image](https://github.com/PPindel/esports-teammates/assets/114284732/1c2b2645-fa2d-4f64-ac6e-7346f6612fc6)
-
-Link to my user stories:
-https://github.com/users/PPindel/projects/4
-
 ### Frameworks, plugins, tools used
 - Bootstrap
 - Django
@@ -212,6 +168,7 @@ I've created a functional website working similarly to a blog website where peop
 # Features
 ## Implemented Features
 - unauthenticated users can view only the landing page
+- navbar and footer
 - defensive programming has been used to protect tampering pages without authentication
 - users can register an account
 - usernames and email addresses must be unique
@@ -225,6 +182,70 @@ I've created a functional website working similarly to a blog website where peop
 - profile page for every user to see data passed on registration
 - when creating a post (Team Ad), users can choose from list of games and skill levels
 - users can add their own image to a post (Team Ad)
+- Favicon
+
+The site has a common navbar (sticky to the top when scrolling), and footer.
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/e160e81d-07f4-4581-98c0-0ba1cbb484b4)
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/d604e5db-cefe-424b-a328-56ed0d9f2965)
+
+Up to six posts per page, two rows of three posts for desktops, and one column for mobile phones.
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/a1bc8c5e-24a9-4d48-aa38-dc9c1bf73e1b)
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/60bdad1b-6473-4965-a7fb-cbae164b295d)
+
+Landing page for not authenticated users:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/3a38c9fb-76dd-4564-b91c-3ee9995a1ca3)
+
+Buttons are changing colors when hovering over:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/9ad37536-54e1-4608-8fc4-c655162a72dd)
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/eba8cb26-a89f-4147-b69f-fce54cc0c267)
+
+All default Django pages (signup, login, etc.) are customised:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/906e3e34-96da-4922-80e3-dca435e099d8)
+
+Custom 404 and 500 error pages:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/9621e955-8577-4f84-81ef-e5cc63612f3d)
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/031702af-1700-413f-8b42-0c3475748df3)
+
+JS script for alerts:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/a05ee5b3-523b-44d1-8896-f55e322a273c)
+
+Simple profile page:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/e874c26c-b37b-4668-a805-44f3b9f524d3)
+
+Admin page:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/1c2b2645-fa2d-4f64-ac6e-7346f6612fc6)
+
+Favicon:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/e2800df0-5201-4904-9053-6aba3e9c947a)
+
+User who is trying to tamper the site will see this page (defensive programming implemented):
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/b686843f-a256-4622-9f2c-280e5c4f1722)
+
+Unique email required:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/1d9f8d84-2a12-446e-9cf2-e6d33aaff260)
+
+Unique username required:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/aab7dbb3-a717-413c-9f58-49976479d04f)
+
+The video below shows registration process and functionality of the site:
+
+[Screenshare - 2023-05-31 4 34 11 PM.webm](https://github.com/PPindel/esports-teammates/assets/114284732/af6aec01-671a-4e9f-9bbb-4bf7b09bb114)
+
+Link to my user stories:
+https://github.com/users/PPindel/projects/4
 
 ## Future Features
 - team apply button and form. Currently, users can apply to join a team by comments, in the future I am planning to create an application form for this
