@@ -168,7 +168,6 @@ I've created a functional website working similarly to a blog website where peop
 # Features
 ## Implemented Features
 - unauthenticated users can view only the landing page
-- navbar and footer
 - defensive programming has been used to protect tampering pages without authentication
 - users can register an account
 - usernames and email addresses must be unique
@@ -182,6 +181,7 @@ I've created a functional website working similarly to a blog website where peop
 - profile page for every user to see data passed on registration
 - when creating a post (Team Ad), users can choose from list of games and skill levels
 - users can add their own image to a post (Team Ad)
+- success messages
 - Favicon
 
 The site has a common navbar (sticky to the top when scrolling), and footer.
@@ -228,7 +228,7 @@ Favicon:
 
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/e2800df0-5201-4904-9053-6aba3e9c947a)
 
-User who is trying to tamper the site will see this page (defensive programming implemented):
+User who is trying to tamper (for example open edit page of the ad they don't own) the site will see this page (defensive programming implemented):
 
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/b686843f-a256-4622-9f2c-280e5c4f1722)
 
@@ -239,6 +239,10 @@ Unique email required:
 Unique username required:
 
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/aab7dbb3-a717-413c-9f58-49976479d04f)
+
+Superuser authentication:
+
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/05b9e16f-0ed3-46f4-9b87-b208ae691104)
 
 The video below shows registration process and functionality of the site:
 
@@ -259,6 +263,10 @@ https://github.com/users/PPindel/projects/4
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/b473d591-f60a-4a17-8f13-6cb30acf9aa7)
 
 https://docs.google.com/spreadsheets/d/1cDYbaHAq-m419ljRykuiJm_YKTj6cpFw6ZTD3LT2aIM/edit?usp=sharing
+
+## Defensive programming testing
+
+
 
 ## Compatibility and Responsive Testing
 
