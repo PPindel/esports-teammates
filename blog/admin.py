@@ -5,6 +5,9 @@ from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(TeamAd)
 class TeamAdmin(SummernoteModelAdmin):
+    """
+    Admin (superuser) class
+    """
 
     list_display = ('game', 'title', 'slug', 'status', 'created_on')
     search_fields = ['title', 'description', 'game']
@@ -15,6 +18,9 @@ class TeamAdmin(SummernoteModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
+    """
+    Allows admin to approve comments
+    """
 
     list_display = ('name', 'body', 'post', 'created_on', 'approved')
     list_filter = ('approved', 'created_on')

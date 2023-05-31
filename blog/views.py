@@ -10,6 +10,11 @@ from django.urls import reverse, reverse_lazy
 
 
 class TeamList(generic.ListView):
+    """
+    List view of Team Ads
+    Has pagination
+    No authentication required
+    """
     model = TeamAd
     queryset = TeamAd.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
@@ -17,7 +22,9 @@ class TeamList(generic.ListView):
 
 
 class TeamDetail(View):
-
+    """
+    Allows to display TeamAd page
+    """
     def get(self, request, slug, *args, **kwargs):
         queryset = TeamAd.objects.filter(status=1)
         team = get_object_or_404(queryset, slug=slug)
@@ -64,6 +71,9 @@ class TeamDetail(View):
 
 
 def add_new_ad(request):
+    """
+    Allows to create a new ad
+    """
     form = TeamAdForm(request.POST or None, request.FILES or None)
     if request.method == 'POST':
 
@@ -81,6 +91,10 @@ def add_new_ad(request):
 
 @method_decorator(login_required, name='dispatch')
 class EditTeamAd(generic.UpdateView):
+    """
+    Allows to edit an ad
+    Authentication required
+    """
     model = TeamAd
     form_class = TeamAdEdit
     template_name = 'edit_team.html'
@@ -106,6 +120,10 @@ class EditTeamAd(generic.UpdateView):
 
 @method_decorator(login_required, name='dispatch')
 class EditComment(generic.UpdateView):
+    """
+    Allows to edit a comment
+    Authentication required
+    """
     model = Comment
     form_class = CommentEdit
     template_name = 'edit_comment.html'
@@ -122,6 +140,10 @@ class EditComment(generic.UpdateView):
 
 @method_decorator(login_required, name='dispatch')
 class DeleteComment(generic.DeleteView):
+    """
+    Allows to delete a comment
+    Authentication required
+    """
     model = Comment
     template_name = 'delete_comment.html'
 
@@ -136,6 +158,10 @@ class DeleteComment(generic.DeleteView):
 
 @method_decorator(login_required, name='dispatch')
 class DeleteTeamAd(generic.DeleteView):
+    """
+    Allows to delete an ad
+    Authentication required
+    """
     model = TeamAd
     template_name = 'delete_team.html'
 
@@ -161,6 +187,9 @@ class DeleteTeamAd(generic.DeleteView):
 
 
 def profile(request):
+    """
+    Displays profile page
+    """
     return render(request, 'profile.html')
 
 

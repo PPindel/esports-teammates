@@ -12,6 +12,11 @@ User = settings.AUTH_USER_MODEL
 
 
 class TeamAd(models.Model):
+    """
+    Team Ad class
+    Has custom fields and options to choose from
+    Contains info about the author and date of creation
+    """
     ROLES = [
         ('Any', 'Any'),
         ('Damage Dealer', 'Damage Dealer'),
@@ -59,11 +64,18 @@ class TeamAd(models.Model):
 
 @receiver(pre_save, sender=TeamAd)
 def pre_save_receiver(sender, instance, *args, **kwargs):
+    """
+    Random slug generator
+    """
     if not instance.slug:
         instance.slug = unique_slug_generator(instance)
 
 
 class Comment(models.Model):
+    """
+    Comment class
+    Contains info about the author and date of creation
+    """
     post = models.ForeignKey(TeamAd, on_delete=models.CASCADE, related_name='comments')  # noqa E501
     name = models.CharField(max_length=80)
     email = models.EmailField()
