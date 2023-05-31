@@ -27,6 +27,7 @@ html {
 .logo {
     font-family: 'Permanent Marker', cursive;
     font-size: 1.75rem;
+    flex-wrap: wrap;
 }
 
 .nav-item a {
@@ -170,6 +171,7 @@ html {
 .btn-signup {
     background-color: #6E44FF;
     color: #ffe7fe;
+    margin-top: 5px;
 }
 
 .btn-signup:hover,
@@ -206,5 +208,12 @@ html {
 @media screen and (max-width: 767px) {
     .card-img-top {
         height: 50vw;
+    }
+}
+
+/* For size from 500px wide and down - smartphones */
+@media screen and (max-width: 500px) {
+    .logo {
+        font-size: 20px;
     }
 }
