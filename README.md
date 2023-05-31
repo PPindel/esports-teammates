@@ -163,7 +163,7 @@ Comments are means of communication for prospective players to join a team
 
 ## Profile
 When users register, a profile is created. 
-## CRUD
+### CRUD
 - **Create:** Automatically happens upon registration
 - **Read:** All users can read their profile by clicking on their name in the navigation
 - **Update:** Only accessible via Django Admin super users
@@ -198,6 +198,7 @@ Default django signup form is slightly upgraded.
 ## Initial User Stories
 https://github.com/users/PPindel/projects/4
 All user stories are marked to show the importance.
+I used MoScOw prioritization to reduce down to an MVP.
 
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/13b9da32-d2ef-4de6-bec6-f98f219c21fa)
 
