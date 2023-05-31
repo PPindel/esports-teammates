@@ -34,6 +34,8 @@ The site is easy to operate and navigate, the content is clear and users can com
 The pallet inspiration was taken from coolors.co.
 However, some of the colors had to be adjusted to match the contrast standard in the Lighthouse validator.
 
+The idea of colors was to be an 80's arcade vibe to reflect the gaming theme of the site.
+
 ### Typography
 Fonts used:
 - Permanent Marker for modern and attractive design
@@ -140,8 +142,32 @@ Some of the details were changed in final product.
 - postgres as the database because the data is relational
 - heroku servers
 
-## Data Models
-Users can create and read their own Team Ad, select the title, game, role, skill level, write a description and upload custom image to the ad.
+# Data Models
+Users can create and read their own Team Ad, select the title, game, role, and skill level, write a description, and upload a custom image to the ad.
+
+## Team Ad
+Team ads are what is the main focus of this website. Gamers can put up an ad to have others join their crew. Other users can leave comments as a means of communication to figure out other details to play together or if the Team is a good fit for them.
+### CRUD
+- **Create:** Registered / Authenticated Users can add their Team via a custom view and form
+- **Read:** All users can read team ads on the Home page or by clicking the image/title to get a detail view of a team ad, they do not need to be logged in
+- **Update:** Only users who are logged in and own a Team ad can update the Team ad via a custom view and form. 
+- **Delete:** Only users who are logged in and own a Team ad can delete the Team ad.
+
+## Comments
+Comments are means of communication for prospective players to join a team
+### CRUD
+- **Create:** Registered/ Authenticated Users can Add a comment to a Team  ad via a custom view and form
+- **Read:** All users can read comments on the Detail page for a given team ad, they do not need to be logged in
+- **Update:** Only users who are logged in and own a Comment can update the Comment via a custom view and form. 
+- **Delete:** Only authenticated users (owners) and superusers can delete comments (admin view for superusers)
+
+## Profile
+When users register, a profile is created. 
+## CRUD
+- **Create:** Automatically happens upon registration
+- **Read:** All users can read their profile by clicking on their name in the navigation
+- **Update:** Only accessible via Django Admin super users
+- **Delete:** Only accessible via Django Admin super users
 
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/cd7e1773-fa8b-44ef-9e01-fa62dbdfcc31)
 
