@@ -16,12 +16,7 @@ from django.contrib.messages import constants as messages
 import os
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if os.path.isfile('env.py'):
-    import env
-    # can override local to False here if you want to test things like 404, 500 error  # noqa E501
-    DEBUG = True
-else:
-    DEBUG = False
+DEBUG = False
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -36,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['esports-teammates.herokuapp.com', '8000-ppindel-esportsteammate-6wo4dfmeucr.ws-eu98.gitpod.io']  # noqa E501
+ALLOWED_HOSTS = ['esports-teammates.herokuapp.com']  # noqa E501
 
 
 # Application definition
