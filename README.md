@@ -451,36 +451,22 @@ manage.py:
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/cd2f8062-c6c1-4495-92a5-6a04f47d6be9)
 
 # Defects
-🚨**Required** 
-
-At this point you need to be using GITHUB's Issues to track these as it helps you with the AGILE process requirement and it's really easy to copy/paste screenshots in and then write up how you closed them.
-
-[Here's a brief overview](https://docs.google.com/document/d/1nDS5tZeMO77Dfq85IZGMSV6C41XaPm9FwcpR3k-UTVc/edit#heading=h.542xzc8ufx4x) I put together on how to do this.
-
-This what my custom bug template looks like in the UX
-![image](https://user-images.githubusercontent.com/23039742/165650359-a352d64e-b128-473d-ab60-7df0568a44df.png)
-
-- provide a link to the issues link in GitHub
-- if you made a custom template include a screenshot
-- if you made a custom template include a link to the template
+- my first defect was revealing the secret code to the github. Currently, the secred code is changed and protected, and the project is safe (occured on 14th of March, fixed on 14th of March)
+- author tag was not displaying correctly (occured on 29th of March, fixed on 29th of March)
+- no redirection after submitting the ad (occured on 29th of March, fixed on 29th of March)
+- no authentications for Team Ad authors (anyone could edit the ad) (occured on 17th of April, fixed on 17th of April)
+- logo for small devices was too wide, so the site wasn't looking good (occured on 31st of May, fixed on 31st of May)
 
 ## Defects of Note
-🚀 **merit & beyond**
+![image](https://github.com/PPindel/esports-teammates/assets/114284732/431bbfed-3330-455e-b5b7-08fbcae1a6bf)
 
-Some defects are more pesky than others. Highlight 3-5 of the bugs that drove you the most nuts and link to them directly here. The accessors really like to know the struggle is real and that by doing this you picked up more skills.
+When I encountered this bug, I was seriously afraid.
+After typing only special chars in title of the TeamAd, the whole site crashed, and all I could see was 500 error.
+Changes in gitpod didn't work, I had to remove the fatal post via admin panel and then restrict title to alphanumeric only to prevent this happen again.
+That's why you can see some special chars in old posts, but currently it is blocked.
 
 ## Outstanding Defects
-🚨**Required** 
-
-It's ok to not resolve all the defects you found as long as:
-- it does not impact a user from completing a vital function on the website
-- it only affects a very small subset of users
-- is an extreme edge case that very few users would try
-- there is an open issue against a framework, browser or technology used
-
-If you know of something that isn't quite right, create an issue and link to it here and explain why you chose not to resolve it. 
-
-Sometimes it's as simple, word wrapping issue that makes the site look odd at a certain screensize that you just didn't have time to fix due to the impending deadline it's best to mention it but note why you allowed it to go live: "Yes it looks odd, but it doesn't impact core functionality of the site." than to let the accessors think you didn't notice it. 
+- Logo and navbar sometimes behaves weird in the Safari browser (not always, that's why I deceided to fix this bug in the future)
 
 # Technologies Used
 ## Languages
