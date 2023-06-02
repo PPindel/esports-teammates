@@ -207,8 +207,9 @@ All default Django pages (signup, login, etc.) are customised:
 
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/906e3e34-96da-4922-80e3-dca435e099d8)
 
-Custom 404 and 500 error pages:
+Custom 403, 404 and 500 error pages:
 
+![obraz](https://github.com/PPindel/esports-teammates/assets/114284732/88bfae82-48ce-4bfe-88b6-0b5f5f9a8069)
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/9621e955-8577-4f84-81ef-e5cc63612f3d)
 ![image](https://github.com/PPindel/esports-teammates/assets/114284732/031702af-1700-413f-8b42-0c3475748df3)
 
@@ -266,7 +267,9 @@ https://docs.google.com/spreadsheets/d/1cDYbaHAq-m419ljRykuiJm_YKTj6cpFw6ZTD3LT2
 
 ## Defensive programming testing
 
+In the video below, I would like to present some defensive programming implemented in my project:
 
+[Screenshare - 2023-06-02 1 19 36 PM.webm](https://github.com/PPindel/esports-teammates/assets/114284732/bb3aff5e-ad97-4125-8efb-83d34de00b19)
 
 ## Compatibility and Responsive Testing
 
@@ -464,6 +467,7 @@ When I encountered this bug, I was seriously afraid.
 After typing only special chars in title of the TeamAd, the whole site crashed, and all I could see was 500 error.
 Changes in gitpod didn't work, I had to remove the fatal post via admin panel and then restrict title to alphanumeric only to prevent this happen again.
 That's why you can see some special chars in old posts, but currently it is blocked.
+Occured on 31st of May, fixed on 2nd of June.
 
 ## Outstanding Defects
 - Logo and navbar sometimes behaves weird in the Safari browser (not always, that's why I deceided to fix this bug in the future)
