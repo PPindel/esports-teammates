@@ -193,6 +193,14 @@ def profile(request):
     return render(request, 'profile.html')
 
 
+def error_403_view(request, exception):
+    """
+    Displays 403.html path
+    """
+
+    return render(request, '403.html')
+
+
 def error_404_view(request, exception):
     """
     Displays 404.html path
