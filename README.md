@@ -14,12 +14,49 @@ https://github.com/PPindel/esports-teammates
 ## Author
 Przemyslaw Pindel
 
-# Table of Contents
-🚀 **merit & beyond**
-
-Generate after readme is complete by copying and pasting your readme from this point & below into this tool:
-- [mardown table of contents generator](https://luciopaiva.com/markdown-toc/)
-**NOTE:** It does have some bugs if you have dashes or trailing spaces in your headers, so make sure all these WORK!
+# Table of contents
+- [Esports Teammates](#esports-teammates)
+  - [Live Site](#live-site)
+  - [Repository](#repository)
+  - [Author](#author)
+- [Table of Contents](#table-of-contents)
+- [UX](#ux)
+  - [Target Audience](#target-audience)
+  - [Design Choices](#design-choices)
+  - [Wireframes](#wireframes)
+- [Information Architecture](#information-architecture)
+  - [Entity Relationship Diagram](#entity-relationship-diagram)
+  - [Database Choice](#database-choice)
+- [Data Models](#data-models)
+  - [Team Ad](#team-ad)
+  - [Comments](#comments)
+  - [Profile](#profile)
+- [Agile Process](#agile-process)
+  - [Project Goals](#project-goals)
+  - [Initial User Stories](#initial-user-stories)
+  - [Scope](#scope)
+- [Features](#features)
+  - [Implemented Features](#implemented-features)
+  - [Future Features](#future-features)
+- [Testing](#testing)
+  - [Manual Testing](#manual-testing)
+  - [Defensive programming testing](#defensive-programming-testing)
+  - [Compatibility and Responsive Testing](#compatibility-and-responsive-testing)
+  - [Accessibility Testing](#accessibility-testing)
+  - [Validation Testing](#validation-testing)
+- [Defects](#defects)
+  - [Defects of Note](#defects-of-note)
+  - [Outstanding Defects](#outstanding-defects)
+- [Technologies Used](#technologies-used)
+  - [Languages](#languages)
+  - [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
+- [Deployment](#deployment)
+  - [Fork and Clone the Repository](#fork-and-clone-the-repository)
+  - [Development Deployment](#development-deployment)
+  - [Production Deployment](#production-deployment)
+- [Credits](#credits)
+  - [Media](#media)
+  - [Acknowledgments](#acknowledgments)
 
 # UX
 ## Target Audience
