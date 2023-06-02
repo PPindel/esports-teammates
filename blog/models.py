@@ -41,7 +41,7 @@ class TeamAd(models.Model):
         ('Smite', 'Smite'),
         ('Dark and Darker', 'Dark and Darker'),
     ]
-    title = models.CharField('title (no special chars)', max_length=200, validators=[RegexValidator(r'^[0-9a-zA-Z]*$', 'Only alphanumeric characters are allowed.')])  # noqa E501
+    title = models.CharField('title (no special chars)', max_length=200, validators=[RegexValidator(r'^[0-9a-zA-Z ]*$', 'Only alphanumeric characters are allowed.')])  # noqa E501
     slug = models.SlugField(max_length=200)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="team_ad")  # noqa E501
     game = models.CharField(max_length=25, choices=GAMES, default='League of Legends')  # noqa E501
